@@ -5,6 +5,8 @@ import Service from './Service'
 import Reviews from './Reviews'
 import Advantages from './Advantages'
 import Sertificates from './Sertificates'
+import SomeFrom from './some-form'
+import Recomnedations from './Recomendations'
 
 
 const Main: FC = () => {
@@ -15,7 +17,9 @@ const Main: FC = () => {
         <Service />
         <Reviews />
         <Advantages />
+        <SomeFrom />
         <Sertificates />
+        <Recomnedations/>
     </div>
   );
 };

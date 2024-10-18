@@ -39,12 +39,12 @@ const Sertificates: FC = () => {
                         <Swiper
                             modules={[Navigation]}
                             navigation={false} // Disable default navigation
-                            slidesPerView={5}
+                            slidesPerView={1}
                             spaceBetween={20}
                             speed={600}
                             breakpoints={{
                                 1024: {
-                                    slidesPerView: 2,
+                                    slidesPerView: 6,
                                 },
                                 800: {
                                     slidesPerView: 1.7,
@@ -58,7 +58,7 @@ const Sertificates: FC = () => {
                             }}
                         >
                             {images.map((img, index) => (
-                                <SwiperSlide key={index}>
+                                <SwiperSlide key={index} className='mt-[30px]'>
                                     <PhotoProvider>
                                         <PhotoView src={img.url}>
                                             <Image
@@ -66,7 +66,7 @@ const Sertificates: FC = () => {
                                                 alt={`Certificate ${index + 1}`}
                                                 width={975}
                                                 height={651}
-                                                className='cursor-pointer h-[500px] w-full object-cover'
+                                                className='cursor-pointer h-[450px] w-full object-cover'
                                             />
                                         </PhotoView>
                                     </PhotoProvider>

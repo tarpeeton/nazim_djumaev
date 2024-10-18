@@ -1,6 +1,4 @@
-import Title from '@/ui/Title'
 import { FC } from 'react'
-import Image from 'next/image'
 import { AiOutlineClockCircle } from 'react-icons/ai'
 import { MdLocalHospital } from 'react-icons/md'
 import { BsStars } from "react-icons/bs"
