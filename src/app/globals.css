@@ -5,3 +5,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
+
+.button {
+    border-radius: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #27BEFF;
+    color: white;
+    font-weight: 700;
+    font-family: "Raleway";
+}
