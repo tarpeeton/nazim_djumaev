@@ -9,7 +9,8 @@ import { Review } from '@/constants/Rewiews';
 import useLocale from '@/hooks/useLocale'
 import { GrLinkNext, GrLinkPrevious } from "react-icons/gr"
 import Image from 'next/image';
-
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 
 
@@ -93,19 +94,28 @@ const Reviews: FC = () => {
                                             <div className='bg-white rounded-[20px] p-[20px] mt-[20px] mdl:w-[99%] 2xl:w-[99%] 2xl:h-[450px]'>
                                                 <div className='flex flex-col h-[320px]'>
                                                     <div className='border-b pb-[30px] border-[#E3E3E3] flex flex-row gap-[10px]'>
+                                                        <PhotoProvider>
                                                         <div className='w-[100px] relative h-[100px] rounded-[20px] overflow-hidden '>
                                                             <div  className='absolute w-full h-full bg-black bg-opacity-40'/>
+                                                            <PhotoView src={review.before.src}>
                                                             <Image src={review.before} alt='sdf' width={100} height={100} className='w-full h-full object-cover'/>
+                                                            </PhotoView>
+                                                            
                                                             <p className='absolute bottom-[10px] text-[16p] 2xl:text-[18px] left-[10px] text-white font-extrabold font-manrope'>
                                                             До
                                                             </p>
                                                         </div>
                                                         <div className='w-[100px] h-[100px] relative rounded-[20px]  overflow-hidden'>
-                                                        <Image src={review.after} alt='sdf' width={100} height={100} className='w-full h-full object-cover'/>
+                                                            <PhotoView src={review.after.src}>
+                                                            <Image src={review.after} alt='sdf' width={100} height={100} className='w-full h-full object-cover'/>
+                                                            </PhotoView>
+                                                       
                                                         <p className='absolute bottom-[10px] text-[16p] 2xl:text-[18px] left-[10px] text-white font-extrabold font-manrope'>
                                                         После
                                                             </p>
                                                         </div>
+                                                        </PhotoProvider>
+                                                        
                                                     </div>
                                                     <div className='flex flex-row gap-[8px] mt-[30px]'>
                                                         
