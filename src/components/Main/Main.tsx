@@ -1,6 +1,8 @@
 import {FC} from 'react';
 import Banner from './Banner'
 import About from './About'
+import Service from './Service'
+import Reviews from './Reviews'
 
 
 const Main: FC = () => {
@@ -8,6 +10,8 @@ const Main: FC = () => {
     <div>
         <Banner />
         <About/>
+        <Service />
+        <Reviews />
     </div>
   );
 };

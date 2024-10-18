@@ -21,7 +21,6 @@ const Banner: FC = () => {
       </div>
 
 
-     
 
 
       <div className=' 2xl:hidden  overflow-hidden absolute bottom-0'>
@@ -31,14 +30,13 @@ const Banner: FC = () => {
         <Image src={MbRigth} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[999]' />
       </div>
 
-      
+
       <div className='hidden 2xl:block rounded-[20px] overflow-hidden absolute bottom-0'>
         <Image src={twoLeftImage} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[999]' />
       </div>
       <div className='hidden 2xl:block rounded-[20px] overflow-hidden absolute bottom-0 right-0'>
         <Image src={twoRigthImage} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[999]' />
       </div>
-
 
 
 
