@@ -7,7 +7,8 @@ import ElTop from "@/public/Main/topEllipse.png"
 import Arrow2l from "@/public/Main/Arrow.png"
 import twoLeftImage from '@/public/Main/2xl.png'
 import twoRigthImage from '@/public/Main/2xlRigth.png'
-
+import MbLeft from '@/public/Main/mbLeft.png'
+import MbRigth from '@/public/Main/mbRigth.png'
 
 
 
@@ -20,13 +21,21 @@ const Banner: FC = () => {
       </div>
 
 
-      <div className="w-full 2xl:hidden  absolute top-0  h-full bg-gradient-to-r rounded-lg shadow-lg from-[#9AE1FF80] to-[#6CF5DD80]" />
+     
 
 
-      <div className='rounded-[20px] overflow-hidden absolute bottom-0'>
+      <div className=' 2xl:hidden  overflow-hidden absolute bottom-0'>
+        <Image src={MbLeft} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[999]' />
+      </div>
+      <div className=' 2xl:hidden  overflow-hidden absolute bottom-0 right-0'>
+        <Image src={MbRigth} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[999]' />
+      </div>
+
+      
+      <div className='hidden 2xl:block rounded-[20px] overflow-hidden absolute bottom-0'>
         <Image src={twoLeftImage} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[999]' />
       </div>
-      <div className='rounded-[20px] overflow-hidden absolute bottom-0 right-0'>
+      <div className='hidden 2xl:block rounded-[20px] overflow-hidden absolute bottom-0 right-0'>
         <Image src={twoRigthImage} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[999]' />
       </div>
 
@@ -37,8 +46,8 @@ const Banner: FC = () => {
       <div className='relative mt-[10px] z-[9999] 2xl:mt-[-230px] 2xl:ml-[-100px]'>
         <Image src={NozimImage} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full  2xl:h-[800px] h-[450px] relative z-[999]' />
         {/*  ELLIPSE */}
-        <div className='absolute bottom-0   2xl:left-1/2 2xl:transform 2xl:-translate-x-1/2'>
-          <Image src={ElTop} alt='Ellipse 5' width={2000} height={900} className='object-contain w-full  h-full' />
+        <div className='absolute bottom-0   left-1/2 transform -translate-x-1/2 w-[300px] 2xl:w-[500px]'>
+          <Image src={ElTop} alt='Ellipse 5' width={2000} height={900} className='object-contain w-[550px]  h-full 2xl:w-[1000px]' />
         </div>
         <div className='absolute  bottom-0  2xl:left-1/2 2xl:transform 2xl:-translate-x-1/2 2xl:h-[300px]'>
           <Image src={ElBottomTop} alt='Ellipse 5' width={2000} height={1400} className='object-contain w-full h-full 2xl:w-[1500px]' />
