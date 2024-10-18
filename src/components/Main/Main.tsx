@@ -3,6 +3,7 @@ import Banner from './Banner'
 import About from './About'
 import Service from './Service'
 import Reviews from './Reviews'
+import Advantages from './Advantages'
 
 
 const Main: FC = () => {
@@ -12,6 +13,7 @@ const Main: FC = () => {
         <About/>
         <Service />
         <Reviews />
+        <Advantages />
     </div>
   );
 };

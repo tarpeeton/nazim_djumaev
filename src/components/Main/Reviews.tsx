@@ -1,7 +1,7 @@
 'use client'
 import { FC, useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+import { Navigation } from 'swiper/modules'
 import 'swiper/swiper-bundle.css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
