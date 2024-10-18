@@ -4,6 +4,7 @@ import About from './About'
 import Service from './Service'
 import Reviews from './Reviews'
 import Advantages from './Advantages'
+import Sertificates from './Sertificates'
 
 
 const Main: FC = () => {
@@ -14,6 +15,7 @@ const Main: FC = () => {
         <Service />
         <Reviews />
         <Advantages />
+        <Sertificates />
     </div>
   );
 };
