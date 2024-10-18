@@ -25,10 +25,8 @@ const Header = ({ locale }: { locale: string }) => {
   }
 
   const toggleMenuOpen = () => setMenu(!menu)
-  const toggleServiceOpen = () => setService(!service)
   const toggleMobileService = () => setMobileService(!mobileService)
 
-  // Effect to close the menu when clicking outside of it
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -42,6 +40,8 @@ const Header = ({ locale }: { locale: string }) => {
     }
   }, [menuRef])
 
+
+
   return (
     <React.Fragment>
       <div className='flex flex-row justify-between bg-white px-[16px] py-[10px] slg:px-[20px] 2xl:px-[180px] z-[9999]'>
@@ -51,16 +51,16 @@ const Header = ({ locale }: { locale: string }) => {
 
         {/* SERVICES */}
         <div className='hidden 2xl:flex 2xl:flex-row 2xl:gap-[70px] z-[9999999]'>
-          <Link href='/tours' className='2xl:font-semibold flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
+          <Link href='/tours' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
             {t('about')}
           </Link>
-          <Link href='/clinics' className='2xl:font-semibold flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
+          <Link href='/clinics' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
              {t('service')}
           </Link>
-          <Link href='/sanatoriums' className='2xl:font-semibold flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
+          <Link href='/sanatoriums' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
              {t('contacts')}
           </Link>
-          <Link href='/hotels' className='2xl:font-semibold flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
+          <Link href='/hotels' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
             {t('reviews')}
           </Link>
         </div>
@@ -68,7 +68,8 @@ const Header = ({ locale }: { locale: string }) => {
       
 
         {/* SWITCHER AND HAMBURGER MENU */}
-        <div className='flex flex-row items-center gap-[16px] 2xl:gap-[40px]'>
+        <div className='flex flex-row items-center gap-[16px] 2xl:gap-[40px] '>
+          
           <div className=''>
             <LanguageSwitcher locale={locale} menu={false} />
           </div>

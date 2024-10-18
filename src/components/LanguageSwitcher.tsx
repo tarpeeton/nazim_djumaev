@@ -48,7 +48,7 @@ const LanguageSwitcher = ({ locale, menu }: { locale: string; menu: boolean }) =
   }, []);
 
   return (
-    <div className="relative mt-[4px] w-[50px]">
+    <div className="relative mt-[4px] w-[50px] ml-[-70px] mdl:ml-0">
       {/* Button to toggle dropdown */}
       <button
         id="dropdownDefaultButton"
@@ -60,7 +60,7 @@ const LanguageSwitcher = ({ locale, menu }: { locale: string; menu: boolean }) =
         <p className={`text-[15px] md:text-[18px] text-black font-medium ${menu ? '2xl:text-[#1AB2A6]' : 'text-black'}`}>
           {locale === "ru" ? "RU" : locale === "uz" ? "Oʻz" : "ru"}
         </p>
-        <MdKeyboardArrowDown  size={25} className='ml-[-6px]'/>
+        <MdKeyboardArrowDown  size={25} className='ml-[-7px] mt-[2.3px]'/>
       </button>
 
       {/* Dropdown menu */}

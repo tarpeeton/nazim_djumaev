@@ -9,24 +9,23 @@ import messages_uz from '@/translation/uz.json';
 
 
 export const metadata: Metadata = {
-  title: 'Med Travel',
-  description: 'Med Travel - Sog\'liqni saqlash va sayohat bo\'yicha professional xizmatlar. Biz tibbiyot va sayohat sohasida yuqori sifatli xizmatlarni taqdim etamiz.',
-  keywords: 'sayohat, sog\'liq, tibbiyot, Med Travel, sog\'liqni saqlash, sayohat xizmatlari',
+  title: 'Nozim Jumayev',
+  description: '',
   authors: [{ name: 'Rustam Kidiraliyev + RESULT AGENCY', url: 'https://my-works-ten.vercel.app/' }],
   icons: {
-    icon: 'https://ucarecdn.com/42c864e6-2a67-4e47-b576-93b3cb92071b/-/preview/499x499/', // Favicon fayli yo'li
+    icon: 'https://ucarecdn.com/c0ab9c21-ce08-4be1-abdb-4c7c973261be/-/preview/60x71/', // Favicon fayli yo'li
   },
   openGraph: {
-    title: 'Med Travel - Sog\'liqni saqlash va sayohat xizmatlari',
-    description: 'Biz sog\'liqni saqlash va sayohat bo\'yicha professional xizmatlar taqdim etamiz.',
+    title: '',
+    description: '',
     url: 'https://yourwebsite.com', // Saytning to'liq URL manzili
     siteName: 'Med Travel',
     images: [
       {
-        url: 'https://ucarecdn.com/42c864e6-2a67-4e47-b576-93b3cb92071b/-/preview/499x499/', // Saytni ifodalovchi rasm
+        url: 'https://ucarecdn.com/c0ab9c21-ce08-4be1-abdb-4c7c973261be/-/preview/60x71/', // Saytni ifodalovchi rasm
         width: 800,
         height: 600,
-        alt: 'Med Travel rasm',
+        alt: 'Nozim Jumayev',
       },
     ],
     type: 'website',
