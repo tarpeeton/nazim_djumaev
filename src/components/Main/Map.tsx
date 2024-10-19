@@ -72,7 +72,7 @@ const YandexMap: FC = () => {
   }, [mapLoaded, mapInstance]);
 
   return (
-    <div className="rounded-[30px] mt-[20px] overflow-hidden w-full mdl:mt-[40px]">
+    <div className="rounded-[30px] mt-[20px] overflow-hidden w-full mdl:mt-[40px] 2xl:h-[400px]">
     <div className='h-[300px] mdl:h-[400px]'>
       <div id="map" className="w-full h-full" />
     </div>

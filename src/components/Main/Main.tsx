@@ -13,8 +13,8 @@ const Main: FC = () => {
   return (
     <div>
         <Banner />
-        <About/>
         <div className='mt-[100px] 2xl:mt-[170px]'>
+        <About/>
         <Service  show={true}/>
         </div>
         <Reviews />

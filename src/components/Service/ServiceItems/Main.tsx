@@ -10,6 +10,7 @@ import Steps from './Step'
 import Advantages from './ServiceAdventages'
 import Reviews from '@/components/Main/Reviews'
 import Risk from './Risk'
+import SomeFrom from '@/components/Main/some-form'
 
 
 
@@ -31,6 +32,7 @@ export const MainServiceWitgSlug: FC = () => {
       <div className='px-[16px] 2xl:px-[180px]'>
           <Risk />
       </div>
+      <SomeFrom />
     </div>
   )
 }
