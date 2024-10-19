@@ -5,13 +5,28 @@ import { FaTelegramPlane, FaWhatsapp, FaInstagram, FaPhone } from 'react-icons/f
 import { FloatingLabelInput } from '@/ui/form/input'
 import { CustomSelect } from '@/ui/form/select'
 import Image from 'next/image'
-
+import { consultation } from '@/lib/api'
 
 const SomeFrom: FC = () => {
     const [name, setName] = useState<string>('')
     const [phone, setPhone] = useState<string>('')
     const [service, setService] = useState<string>('')
 
+
+    const handleSubmitService = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        try {
+            const res = await consultation(
+                name,
+                phone,
+                service,
+                "consultation"
+            );
+            console.log(res);
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
     return (
         <div className='mx-[16px] mt-[100px] 2xl:mt-[170px] 2xl:mx-[180px] rounded-[20px] 2xl:rounded-[30px] flex flex-col 2xl:flex-row 2xl:justify-between relative overflow-hidden py-[30px] px-[25px] 2xl:py-[50px] 2xl:px-[50px]'>
@@ -45,7 +60,7 @@ const SomeFrom: FC = () => {
             </div>
             <div className='2xl:w-[50%] 2xl:flex 2xl:justify-center mt-[40px] relative z-50 2xl:mt-0'>
 
-                <form className='2xl:w-[70%] flex flex-col gap-[20px]'>
+                <form onSubmit={handleSubmitService} className='2xl:w-[70%] flex flex-col gap-[20px]'>
                     <FloatingLabelInput label='ФИО' id='1' type='name'
                         setValue={setName} />
                     <FloatingLabelInput label='Номер телефона' id='2' type='phone'
@@ -60,7 +75,7 @@ const SomeFrom: FC = () => {
                             { value: 'treatment', label: 'Лечение' },
                         ]}
                     />
-                    <button className='rounded-full bg-white py-[15px] px-[20px] w-[80%] mx-auto text-center text-[16px] 2xl:text-[18px] text-[#5A9B8E] font-bold font-manrope 2xl:w-[70%] mt-[30px] 2xl:mt-[40px] 2xl:mx-0'>
+                    <button type='submit' className='rounded-full bg-white py-[15px] px-[20px] w-[80%] mx-auto text-center text-[16px] 2xl:text-[18px] text-[#5A9B8E] font-bold font-manrope 2xl:w-[70%] mt-[30px] 2xl:mt-[40px] 2xl:mx-0'>
                         Отправить
                     </button>
                 </form>
