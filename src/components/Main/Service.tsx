@@ -113,7 +113,7 @@ const Service: FC = () => {
 
     return (
         <div className='mt-[100px] mx-[16px]  2xl:mt-[170px] 2xl:mx-[180px]'>
-            <Title text='Услуги' />
+            <Title  text={{ru: "Услуги" , uz: "Xizmatlar"}}/>
             <div className='flex flex-col mt-[50px] 2xl:mt-[40px] w-full '>
                 <div className='2xl:hidden'>
                 <Swiper
