@@ -7,6 +7,12 @@ import { Link } from '@/i18n/routing'
 import { GrFormPrevious } from "react-icons/gr"
 import Video from './Video'
 import Steps from './Step'
+import Advantages from './ServiceAdventages'
+import Reviews from '@/components/Main/Reviews'
+import Risk from './Risk'
+
+
+
 export const MainServiceWitgSlug: FC = () => {
   return (
     <div>
@@ -17,12 +23,14 @@ export const MainServiceWitgSlug: FC = () => {
             Назад
           </p>
         </Link>
-
-
         <Video />
         <Steps />
+        <Advantages />
       </div>
-
+      <Reviews />
+      <div className='px-[16px] 2xl:px-[180px]'>
+          <Risk />
+      </div>
     </div>
   )
 }
