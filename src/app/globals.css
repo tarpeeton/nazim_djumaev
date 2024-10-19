@@ -17,3 +17,7 @@
     font-weight: 700;
     font-family: "Raleway";
 }
+
+.react-player__preview {
+    border-radius: 20px !important;
+}

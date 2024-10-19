@@ -14,7 +14,9 @@ const Main: FC = () => {
     <div>
         <Banner />
         <About/>
-        <Service />
+        <div className='mt-[100px] 2xl:mt-[170px]'>
+        <Service  show={true}/>
+        </div>
         <Reviews />
         <Advantages />
         <SomeFrom />
