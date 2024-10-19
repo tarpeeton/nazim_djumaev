@@ -29,7 +29,7 @@ const Reviews: FC = () => {
     return (
         <div>
             <div className='mt-[120px] bg-[#F1F4F8] 2xl:pl-[200px]'>
-                <div>
+                <div >
                     <div className='flex flex-col py-[40px] px-[20px]'>
                        
                         <Title  text={{ru: "Отзывы" , uz: "Sharhlar"}}/>
