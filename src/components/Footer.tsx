@@ -8,6 +8,7 @@ import { MdOutlineNavigateNext } from "react-icons/md"
 import { FaTelegramPlane, FaWhatsapp, FaInstagram, FaPhone } from 'react-icons/fa'
 import { FooterService } from '@/constants/Footer'
 import useLocale from '@/hooks/useLocale'
+import YandexMap from './Main/Map'
 
 
 
@@ -22,6 +23,7 @@ const Footer: FC = () => {
 
 	return (
 		<div className='bg-[#F9F9F9] mt-[120px] '>
+			<YandexMap />
 			<div className=' py-[30px] px-[16px] flex flex-col 2xl:flex-row 2xl:px-[180px] 2xl:justify-between'>
 				<div>
 				<div className='flex flex-col'>
