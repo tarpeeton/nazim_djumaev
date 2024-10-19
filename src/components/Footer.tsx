@@ -22,7 +22,7 @@ const Footer: FC = () => {
 
 	return (
 		<div className='bg-[#F9F9F9] mt-[120px] '>
-			<div className=' py-[30px] px-[16px] flex flex-col 2xl:flex-row 2xl:px-[180px]'>
+			<div className=' py-[30px] px-[16px] flex flex-col 2xl:flex-row 2xl:px-[180px] 2xl:justify-between'>
 				<div>
 				<div className='flex flex-col'>
 					<div className='flex flex-row w-full'>
