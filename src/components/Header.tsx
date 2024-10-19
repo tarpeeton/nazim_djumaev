@@ -69,7 +69,7 @@ const Header = ({ locale }: { locale: string }) => {
         {/* SWITCHER AND HAMBURGER MENU */}
         <div className='flex flex-row items-center gap-[16px] 2xl:gap-[40px] '>
           
-          <div className=''>
+          <div className='w-[90px] flex items-center justify-center'>
             <LanguageSwitcher locale={locale} menu={false} />
           </div>
           <button onClick={toggleMenuOpen} className='block 2xl:hidden'>

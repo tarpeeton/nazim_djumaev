@@ -1,14 +1,15 @@
 "use client"
-import Image from 'next/image'
 import { FC } from 'react'
+import Image from 'next/image'
 import { Link } from '@/i18n/routing'
-import Logo from '@/public/logo.png'
 import { MdOutlineNavigateNext } from "react-icons/md"
-
 import { FaTelegramPlane, FaWhatsapp, FaInstagram, FaPhone } from 'react-icons/fa'
-import { FooterService } from '@/constants/Footer'
+
 import useLocale from '@/hooks/useLocale'
+import { FooterService } from '@/constants/Footer'
 import YandexMap from './Main/Map'
+import { useParams } from 'next/navigation'
+import Logo from '@/public/logo.png'
 
 
 
@@ -19,11 +20,14 @@ import YandexMap from './Main/Map'
 
 const Footer: FC = () => {
 	const locale = useLocale()
+	const {path} = useParams()
+	const showMap = !(path === '/ru/contacts' || path === '/uz/contacts');
+
 
 
 	return (
 		<div className='bg-[#F9F9F9] mt-[120px] '>
-			<YandexMap />
+			{showMap && <YandexMap />}
 			<div className=' py-[30px] px-[16px] flex flex-col 2xl:flex-row 2xl:px-[180px] 2xl:justify-between'>
 				<div>
 				<div className='flex flex-col'>
