@@ -2,14 +2,15 @@ import Image from 'next/image'
 import { FC } from 'react'
 import { Link } from '@/i18n/routing'
 import { MdOutlineNavigateNext } from "react-icons/md"
+import Title from '@/ui/Title'
 
 
 const Recomnedations: FC = () => {
     return (
         <div className='mx-[16px] 2xl:mx-[180px] mt-[100px] 2xl:mt-[170px]'>
-            <p className='text-titleDark text-[25px] font-bold font-raleway mdl:text-[35px] 2xl:text-[40px]'>
-                Рекомендации
-            </p>
+            
+            <Title  text={{ru: "Рекомендации" , uz: "Maslaxatlar"}}/>
+
 
             <div className='flex flex-col gap-[30px] mt-[20px] 2xl:mt-[30px] 2xl:flex-row 2xl:flex-wrap 2xl:justify-between 2xl:gap-[10px]'>
                 <div className='2xl:w-[32%]'>

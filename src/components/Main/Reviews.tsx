@@ -13,7 +13,7 @@ import { PhotoProvider, PhotoView } from 'react-photo-view'
 import 'react-photo-view/dist/react-photo-view.css'
 import { MdOutlineNavigateNext } from "react-icons/md"
 import { Link } from '@/i18n/routing'
-
+import Title from '@/ui/Title'
 
 
 
@@ -31,9 +31,8 @@ const Reviews: FC = () => {
             <div className='mt-[120px] bg-[#F1F4F8] 2xl:pl-[200px]'>
                 <div>
                     <div className='flex flex-col py-[40px] px-[20px]'>
-                        <p className='text-titleDark text-[25px] font-bold font-raleway mdl:text-[35px] 2xl:text-[40px]'>
-                            Отзывы
-                        </p>
+                       
+                        <Title  text={{ru: "Отзывы" , uz: "Sharhlar"}}/>
 
                         <div className='2xl:mt-[40px]'>
                             <Swiper

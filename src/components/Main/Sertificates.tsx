@@ -8,6 +8,7 @@ import 'swiper/css/pagination'
 import Image from 'next/image'
 import { PhotoProvider, PhotoView } from 'react-photo-view'
 import 'react-photo-view/dist/react-photo-view.css'
+import Title from '@/ui/Title'
 
 const images = [
     { url: "https://ucarecdn.com/62baa773-19f2-4b34-83e8-74b0b4b946cc/-/preview/975x651/" },
@@ -31,9 +32,9 @@ const Sertificates: FC = () => {
         <div>
             <div className='mt-[100px] 2xlmt-[170px]  2xl:pl-[180px]'>
                 <div className='flex flex-col py-[40px] px-[20px]'>
-                    <p className='text-titleDark text-[30px] font-bold font-raleway mdl:text-[35px] 2xl:text-[40px]'>
-                        Сертификаты и достижения
-                    </p>
+                   
+                <Title  text={{ru: "Сертификаты и достижения" , uz: "Sertifikat va Yutuqlar"}}/>
+
 
                     <div className='2xl:mt-[40px]'>
                         <Swiper

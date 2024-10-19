@@ -6,7 +6,7 @@ import ImageAbout from '@/public/Main/Image.png'
 const About: FC = () => {
     return (
         <div className='mt-[100px] 2xl:mt-[170px] mx-[16px] 2xl:mx-[180px]'>
-            <p className='text-[40px] 2xl:text-[40px] text-titleDark font-extrabold'>Обо мне</p>
+            <Title  text={{ru: "Обо мне" , uz: "Men haqimda"}}/>
             <div className='flex flex-col items-center 2xl:flex-row mt-[50px]  2xl:justify-between'>
                 <div className='rounded-[20px] overflow-hidden 2xl:w-[50%]'>
                     <Image src={ImageAbout} alt='About image' width={710} height={620} className='w-full h-full' />

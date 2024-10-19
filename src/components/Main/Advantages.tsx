@@ -2,14 +2,15 @@ import { FC } from 'react'
 import { AiOutlineClockCircle } from 'react-icons/ai'
 import { MdLocalHospital } from 'react-icons/md'
 import { BsStars } from "react-icons/bs"
+import Title from '@/ui/Title'
 
 
 const Advantages: FC = () => {
     return (
         <div className='mt-[100px] mx-[16px]  2xl:mt-[170px] 2xl:mx-[180px]'>
-            <p className='text-[30px]  2xl:text-[40px] text-titleDark font-extrabold'>
-                Преимущества лечения
-            </p>
+           
+            <Title  text={{ru: "Преимущества лечения" , uz: "Davolashning afzalliklari"}}/>
+
 
             <div className='flex flex-col 2xl:flex  gap-[20px] 2xl:flex-row 2xl:justify-between 2xl:gap-[10px] mt-[30px] 2xl:mt-[50px]'>
                 <div className='rounded-[15px] border border-[#E3E3E3] p-[25px] 2xl:w-[33%]'>

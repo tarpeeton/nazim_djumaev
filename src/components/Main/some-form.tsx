@@ -1,3 +1,4 @@
+import Title from '@/ui/Title'
 import { FC } from 'react'
 import { FaTelegramPlane, FaWhatsapp, FaInstagram, FaPhone } from 'react-icons/fa';
 
@@ -8,9 +9,9 @@ const SomeFrom: FC = () => {
     return (
         <div className='mx-[16px] mt-[100px] 2xl:mt-[170px] 2xl:mx-[180px] rounded-[20px] 2xl:rounded-[30px] flex flex-col 2xl:flex-row 2xl:justify-between'>
             <div className='flex flex-col'>
-                <p className='text-titleDark text-[25px] font-bold font-raleway mdl:text-[35px] 2xl:text-[40px]'>
-                    Записаться на консультацию
-                </p>
+                
+                <Title  text={{ru: "Записаться на консультацию" , uz: "Konsultatsiya uchun yozilish"}}/>
+
                 <p className='text-[16px] font-manrope text-[#686868] 2xl:text-[20px] mt-[13px]'>
                     Заполните форму чтобы записаться на консультацию
                 </p>

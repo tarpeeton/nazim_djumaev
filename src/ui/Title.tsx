@@ -1,12 +1,15 @@
+"use client"
+import useLocale from '@/hooks/useLocale'
 import {FC} from 'react';
 
 interface ITitleProps {
-    text: string
+    text: { ru: string, uz: string }
 }
 
 
 const Title: FC<ITitleProps> = ({text}) => {
-  return <p className='text-[30px]  2xl:text-[40px] text-titleDark font-extrabold'>{text}</p>
+  const locale = useLocale()
+  return <p className='text-[30px]  2xl:text-[40px] text-titleDark font-extrabold font-manrope'>{text[locale]}</p>
 };
 
 export default Title;
