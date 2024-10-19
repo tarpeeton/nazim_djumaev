@@ -12,7 +12,6 @@ import Logo from '@/public/logo.png'
 const Header = ({ locale }: { locale: string }) => {
   const t = useTranslations('Header')
   const [menu, setMenu] = useState(false)
-  const [service, setService] = useState(false)
   const [mobileService, setMobileService] = useState(true)
   const [question, setQuestion] = useState(false)
  

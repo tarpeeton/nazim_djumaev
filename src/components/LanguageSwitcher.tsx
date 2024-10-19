@@ -48,7 +48,7 @@ const LanguageSwitcher = ({ locale, menu }: { locale: string; menu: boolean }) =
   }, []);
 
   return (
-    <div className="relative mt-[4px] w-[50px] ml-[-70px] mdl:ml-0">
+    <div className="relative z-[99999999] mt-[4px] w-[50px] ml-[-70px] mdl:ml-0">
       {/* Button to toggle dropdown */}
       <button
         id="dropdownDefaultButton"

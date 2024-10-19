@@ -1,75 +1,82 @@
+"use client"
 import Image from 'next/image'
 import { FC } from 'react'
 import { Link } from '@/i18n/routing'
+import Logo from '@/public/logo.png'
+import { MdOutlineNavigateNext } from "react-icons/md"
+
+import { FaTelegramPlane, FaWhatsapp, FaInstagram, FaPhone } from 'react-icons/fa'
+import { FooterService } from '@/constants/Footer'
+import useLocale from '@/hooks/useLocale'
+
+
+
+
+
+
+
 
 const Footer: FC = () => {
+	const locale = useLocale()
+
+
 	return (
 		<div className='bg-[#F9F9F9] mt-[120px] '>
-			<div className='2xl:flex 2xl:flex-row 2xl:px-[200px]'>
-				<div className='flex flex-col border-b border-borderColor 2xl:border-b-0 '>
-					<div className='p-[16px] w-[80%]  mdl:flex mdl:flex-row mdl:w-[100%]  mdl:py-[30px] mdl:px-[20px]'>
-						<Image src='https://ucarecdn.com/42c864e6-2a67-4e47-b576-93b3cb92071b/-/preview/499x499/' alt='Logo' quality={100} width={80} height={80} className='object-contain mdl:w-[90px]' />
-
-						<div className='mt-[16px] mdl:ml-[80px] mdl:w-[40%] 2xl:hidden'>
-							<p className='text-[22px] font-raleway text-titleDark font-bold mdl:text-[28px] '>Здоровье и отдых в одном путешествии!</p>
-							<button className='borderedButton mt-[16px] font-bold'>
-								Начать путешествие
-							</button>
+			<div className=' py-[30px] px-[16px] flex flex-col 2xl:flex-row 2xl:px-[180px]'>
+				<div>
+				<div className='flex flex-col'>
+					<div className='flex flex-row w-full'>
+						<Image src={Logo} alt='Logo' quality={100} width={80} height={80} className='object-contain w-[55px] he-[55px]' />
+						<div className='w-[40%] ml-[17px]'>
+							<p className='text-[25px] text-myBlue  font-extrabold font-manrope'>Нозим Жумаев</p>
 						</div>
 					</div>
 				</div>
-				<div className='flex flex-row flex-wrap py-[25px] px-[16px] justify-between border-b border-borderColor mdl:px-[20px] mdl:py-[40px]'>
-					<div className='w-[50%] mdl:w-[33%] 2xl:w-[15%]'>
-						<span className='text-[16px] font-semibold text-titleDark mdl:text-[18px]'>Услуги</span>
-						<div className='flex flex-col mt-[8px] gap-[4px] mdl:gap-[6px]'>
-							<Link href='/tours' className='text-[15px] font-medium text-titleDark font-raleway hover:text-[#1AB2A6] duration-300'>Туры</Link>
-							<Link href='/clinics' className='text-[15px] font-medium text-titleDark font-raleway hover:text-[#1AB2A6] duration-300'>Клиники</Link>
-							<Link href='/sanatoriums' className='text-[15px] font-medium text-titleDark font-raleway hover:text-[#1AB2A6] duration-300'>Санатории</Link>
-
-							<Link href='/hotels' className='text-[15px] font-medium text-titleDark font-raleway hover:text-[#1AB2A6] duration-300'>Гостиницы</Link>
-
-						</div>
-					</div>
-					<div className='w-[50%] mdl:w-[33%] 2xl:w-[15%]'>
-						<span className='text-[16px] font-semibold text-titleDark mdl:text-[18px]'>Med Travel</span>
-						<div className='flex flex-col mt-[8px] gap-[4px] mdl:gap-[6px]'>
-							<Link href='/about' className='text-[15px] font-medium text-titleDark font-raleway hover:text-[#1AB2A6] duration-300'>О компании</Link>
-							<Link href='/' className='text-[15px] font-medium text-titleDark font-raleway'>Партнеры</Link>
-							<Link href='/' className='text-[15px] font-medium text-titleDark font-raleway hover:text-[#1AB2A6] duration-300'>Задать вопрос</Link>
-							<Link href='/blog' className='text-[15px] font-medium text-titleDark font-raleway hover:text-[#1AB2A6] duration-300'>Блог</Link>
-
-						</div>
-					</div>
-					<div className='w-[80%] mt-[40px] mdl:w-[33%] mdl:mt-0 2xl:w-[15%]'>
-						<span className='text-[16px] font-semibold text-titleDark mdl:text-[18px]'>Мы в соц.сетях</span>
-						<div className='flex flex-row flex-wrap mt-[8px] gap-[40px]  mdl:flex-col mdl:gap-0'>
-							<div className='flex flex-col gap-[4px] mdl:gap-[6px]'>
-								<Link href='/' className='text-[15px] font-medium text-titleDark font-raleway hover:text-[#1AB2A6] duration-300'>Instagram</Link>
-								<Link href='/' className='text-[15px] font-medium text-titleDark font-raleway hover:text-[#1AB2A6] duration-300'>Telegram</Link>
-							</div>
-
-							<div className='flex flex-col gap-[4px] mdl:gap-[6px] mdl:mt-[6px]'>
-								<Link href='/' className='text-[15px] font-medium text-titleDark font-raleway hover:text-[#1AB2A6] duration-300'>Facebook</Link>
-								<Link href='/' className='text-[15px] font-medium text-titleDark font-raleway  hover:text-[#1AB2A6]'>E-mail</Link>
-							</div>
-
-
-						</div>
-					</div>
-					<div className='hidden   2xl:block 2xl:w-[35%]'>
-						<p className='text-[22px] font-raleway text-titleDark font-bold mdl:text-[28px] '>Здоровье и отдых в одном путешествии!</p>
-						<button className='borderedButton mt-[16px] font-bold'>
-							Начать путешествие
-						</button>
-					</div>
+				{/* LINKS */}
+				<div className='flex flex-row mt-[21px] gap-[10px]'>
+					<button className='rounded-full border font-bold border-[#ABD6EA] w-[50px] h-[50px] flex items-center justify-center text-center'>
+						<FaInstagram className='text-myBlue' size={25} />
+					</button>
+					<button className='rounded-full border font-bold border-[#ABD6EA] w-[50px] h-[50px] flex items-center justify-center text-center'>
+						<FaTelegramPlane className='text-myBlue' size={25} />
+					</button>
+					<button className='rounded-full border font-bold border-[#ABD6EA] w-[50px] h-[50px] flex items-center justify-center text-center'>
+						<FaWhatsapp className='text-myBlue' size={25} />
+					</button>
+					<button className='rounded-full border font-bold border-[#ABD6EA] w-[50px] h-[50px] flex items-center justify-center text-center'>
+						<FaPhone className='text-myBlue' size={25} />
+					</button>
 				</div>
-				{/* COPY */}
+				
+				</div>
+
+
+				<div className='flex flex-col gap-[40px] 2xl:flex-row px-[16px] mt-[40px] 2xl:mt-0 2xl:gap-[60px]'>
+				{FooterService.map((ser, index) => (
+					<div key={index} className='cursor-pointer relative 2xl:pb-[60px]'>
+						<p className='text-[20px] text-titleDark font-bold font-manrope 2xl:text-[24px] mb-[15px]'>{ser.serviceName[locale]}</p>
+						{ser.service.map((name, index) => (
+							<p key={index} className='text-[16px] text-titleDark 2xl:text-[18px] font-medium '>{name.name[locale]}</p>
+
+						))}
+
+						<Link href={ser.link.href} className='text-myBlue flex items-center font-bold mt-[15px] 2xl:absolute 2xl:bottom-[20px]'>
+							{ser.link.text[locale]}
+							<MdOutlineNavigateNext size={25} className='mt-[3px] ml-[3px]' />
+						</Link>
+					</div>
+				))}
 
 
 			</div>
+			</div>
+			
+
+
+			{/* COPY */}
 			<div className='flex flex-row py-[12px] px-[18px] 2xl:px-[200px] border-t border-borderColor'>
 				<div className='w-[55%] flex items-center mdl:w-[70%]'>
-					<p className='font-raleway font-medium text-[12px] text-[#B3B3B3] mdl:text-[16px] '>2024 © Med Travel  Association. Все права защищены</p>
+					<p className='font-raleway font-medium text-[12px] text-[#B3B3B3] mdl:text-[16px] '>2024 © Нозим Жумаев. Все права защищены</p>
 				</div>
 				<div className='w-[45%] flex items-center justify-end'>
 					<Link href='https://result-me.uz/api/redirect?from=bWVkLXRyYXZlbA=='>
