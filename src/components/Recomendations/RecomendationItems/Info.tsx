@@ -1,13 +1,12 @@
 "use client"
 import Title from '@/ui/Title'
 import { FC, useEffect, useState } from 'react'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import { GoDotFill } from "react-icons/go"
 import { RecomendationsData } from '@/constants/Recomendations'
 import { useParams } from 'next/navigation'
 import useLocale from '@/hooks/useLocale'
 import { IRecomendationData } from '@/constants/Recomendations'
-import { option } from 'yandex-maps'
 
 
 
@@ -38,11 +37,8 @@ const RecomendationInfo: FC = () => {
                         quality={100}
                         className='w-full h-full object-cover'
                     />}
-
                 </div>
-
-
-                <div >
+                <div>
                         {data?.options.map((option, index) => (
                             <div key={index} className='mt-[60px] 2xl:mt-[80px]'>
                                 <p className='2xl:text-[30px] text-[20px] font-bold font-manrope '>{option.text[locale]}</p>
@@ -57,9 +53,7 @@ const RecomendationInfo: FC = () => {
                                     </p>
                                 </div>
                                 ))}
-                                
                             </div>
-
                         ))}
                 </div>
             </div>

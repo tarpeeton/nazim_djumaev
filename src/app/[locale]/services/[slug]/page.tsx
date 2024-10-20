@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return {
     title: `${slug}`,
     description: `: ${slug}`,
-    keywords: `nozim Jumayev, Songi Xabarlar ${slug}`,
+    keywords: `Nozim Jumayev ${slug}`,
   };
 }
 

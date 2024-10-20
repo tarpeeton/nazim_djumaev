@@ -140,7 +140,6 @@ const Service: FC<IServiceProps> = ({ show }) => {
                     <Swiper
                         spaceBetween={10}
                         slidesPerView={2}
-                        autoplay={{ delay: 2300 }}
                         modules={[Navigation, Pagination, Autoplay]}
                         className='w-full 2xl:hidden'
                     >

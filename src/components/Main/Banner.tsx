@@ -19,7 +19,7 @@ import { HiCursorClick } from "react-icons/hi"
 
 const Banner: FC = () => {
   return (
-    <div className='mt-[10px] relative w-full overflow-hidden'>
+    <div className='mt-[10px]  w-full overflow-hidden'>
       <div className='flex flex-col w-full z-[9999] relative'>
         <h1 className=' w-full  text-[70px] mdl:text-[] text-center 2xl:text-[140px] text-titleDark font-bold font-manrope  uppercase'>Нозим Жумаев</h1>
         <p className=' mx-[13px] 2xl:w-[29%] 2xl:text-left 2xl:ml-[180px] 2xl:mx-0 text-center mt-[10px] text-[14px] font-semibold  text-[#686868]  2xl:text-[18px]'>Опытный бариатрический хирург с многолетней практикой. Специализируется на передовых методах хирургического лечения ожирения и смежных проблем</p>
