@@ -1,35 +1,31 @@
 "use client"
-import React, { FC } from 'react'
-import { Review } from '@/constants/Rewiews'
+import React, { FC, useState } from 'react'
+import { IReviewsData } from '@/constants/Rewiews'
 import Image from 'next/image'
 import { PhotoProvider, PhotoView } from 'react-photo-view'
 import 'react-photo-view/dist/react-photo-view.css'
 import useLocale from '@/hooks/useLocale'
-import { Link } from '@/i18n/routing'
 import { MdOutlineNavigateNext } from "react-icons/md"
-import { useSearchParams } from 'next/navigation'
 
 
 
-const REVIEWS_PER_PAGE = 9; // Number of reviews per page
 
-const ReviewsCard: FC = () => {
-    const searchParams = useSearchParams(); // Get search params
-    const page = parseInt(searchParams.get('page') || '1', 10); // Retrieve the 'page' parameter and default to 1
-    const locale = useLocale();
+interface IReviewsProps  {
+    data: IReviewsData[]
+}
 
-    // Calculate the starting index and the ending index for slicing the reviews
-    const startIndex = (page - 1) * REVIEWS_PER_PAGE;
-    const endIndex = startIndex + REVIEWS_PER_PAGE;
 
-    // Slice the reviews array for the current page
-    const reviewsToDisplay = Review.slice(startIndex, endIndex);
+const ReviewsCard: FC<IReviewsProps> = ({data}) => {
+   const locale = useLocale()
 
+    const showMore = () => {
+
+    }
     return (
         <div className='mt-[30px] 2xl:mt-[40px]'>
             <div className='flex flex-col'>
                 <div className='flex flex-col 2xl:flex-row 2xl:flex-wrap gap-[20px]'>
-                    {reviewsToDisplay.map((review , index) => (
+                    {data.map((review , index) => (
                         <div key={index} className='flex flex-row gap-[2%] cursor-pointer 2xl:w-[32%] relative '>
                             <div className='bg-white rounded-[20px] p-[20px] mt-[20px] mdl:w-[99%] 2xl:w-[99%]  2xl:h-[450px]'>
                                 <div className='flex flex-col'>
@@ -71,10 +67,10 @@ const ReviewsCard: FC = () => {
                                         </p>
                                     </div>
 
-                                    <Link href={`/service/${review.slug}`} className='text-myBlue flex items-center font-bold mt-[20px] 2xl:absolute 2xl:bottom-[20px]'>
+                                    <button onClick={showMore} className='text-myBlue flex items-center font-bold mt-[20px] 2xl:absolute 2xl:bottom-[20px]'>
                                         Подробнее
                                         <MdOutlineNavigateNext size={25} className='mt-[3px] ml-[4px]' />
-                                    </Link>
+                                    </button>
 
                                 </div>
                             </div>

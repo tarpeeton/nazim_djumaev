@@ -1,4 +1,4 @@
-import {FC} from 'react';
+import { FC } from 'react'
 import Banner from './Banner'
 import About from './About'
 import Service from './Service'
@@ -12,18 +12,20 @@ import Recomnedations from './Recomendations'
 const Main: FC = () => {
   return (
     <div>
-        <Banner />
+      <Banner />
+      <div className='mt-[100px] 2xl:mt-[170px]'>
+        <About />
         <div className='mt-[100px] 2xl:mt-[170px]'>
-        <About/>
-        <Service  show={true}/>
+          <Service show={true} />
         </div>
-        <Reviews />
-        <Advantages />
-        <SomeFrom />
-        <Sertificates />
-        <Recomnedations/>
+      </div>
+      <Reviews />
+      <Advantages />
+      <SomeFrom />
+      <Sertificates />
+      <Recomnedations />
     </div>
-  );
-};
+  )
+}
 
-export default Main;
+export default Main

@@ -1,30 +1,30 @@
-"use client";
+'use client';
 import { FC, useState, useEffect } from 'react';
-import { MdNavigateNext } from "react-icons/md";
-import { GrFormPrevious } from "react-icons/gr";
-import { useRouter, useSearchParams } from 'next/navigation'; // Use useSearchParams for search parameters
+import { MdNavigateNext } from 'react-icons/md';
+import { GrFormPrevious } from 'react-icons/gr';
+import { useRouter, useSearchParams } from 'next/navigation';
 
-const PaginationComponent: FC = () => {
+interface PaginationProps {
+  totalPages: number;
+  currentPage: number;
+}
+
+const PaginationComponent: FC<PaginationProps> = ({ totalPages, currentPage }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const totalPages = 2; // Total number of pages
-  const initialPage = searchParams.get('page') ? parseInt(searchParams.get('page') as string, 10) : 1; // Get page from URL or default to 1
-  const [currentPage, setCurrentPage] = useState<number>(initialPage);
+  const [page, setPage] = useState<number>(currentPage);
 
-  // Update current page when the search params change
+  // Update page number if the currentPage prop changes
   useEffect(() => {
-    const page = searchParams.get('page');
-    if (page) {
-      setCurrentPage(parseInt(page, 10));
-    }
-  }, [searchParams]);
+    setPage(currentPage);
+  }, [currentPage]);
 
   // Handler for page changes
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
+  const handlePageChange = (newPage: number) => {
+    setPage(newPage);
     const params = new URLSearchParams(searchParams.toString());
-    if (page > 1) {
-      params.set('page', page.toString()); // Update the URL with the new page number
+    if (newPage > 1) {
+      params.set('page', newPage.toString()); // Update the URL with the new page number
     } else {
       params.delete('page'); // Remove page param if page is 1
     }
@@ -39,7 +39,7 @@ const PaginationComponent: FC = () => {
         <button
           key={i}
           className={`mx-1 px-4 py-2 rounded-full transition-colors duration-300 
-            ${i === currentPage ? 'bg-myBlue text-white' : 'bg-gray-200 text-gray-700 hover:bg-myBlue hover:text-white'}`}
+            ${i === page ? 'bg-myBlue text-white' : 'bg-gray-200 text-gray-700 hover:bg-myBlue hover:text-white'}`}
           onClick={() => handlePageChange(i)}
         >
           {i}
@@ -52,8 +52,8 @@ const PaginationComponent: FC = () => {
   return (
     <div className="flex justify-center mt-[50px] 2xl:mt-[100px]">
       <button
-        onClick={() => handlePageChange(currentPage - 1)}
-        disabled={currentPage === 1}
+        onClick={() => handlePageChange(page - 1)}
+        disabled={page === 1}
       >
         <GrFormPrevious size={20} />
       </button>
@@ -61,8 +61,8 @@ const PaginationComponent: FC = () => {
       {renderPageNumbers()}
 
       <button
-        onClick={() => handlePageChange(currentPage + 1)}
-        disabled={currentPage === totalPages}
+        onClick={() => handlePageChange(page + 1)}
+        disabled={page === totalPages}
       >
         <MdNavigateNext size={20} />
       </button>
