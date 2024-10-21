@@ -19,7 +19,8 @@ import { HiCursorClick } from "react-icons/hi"
 
 const Banner: FC = () => {
   return (
-    <div className='mt-[10px]  w-full overflow-hidden'>
+    <div className='mt-[10px]  w-full overflow-hidden  2xl:h-auto'>
+      <div className='2xl:h-[725px] '>
       <div className='flex flex-col w-full z-[9999] relative'>
         <h1 className=' w-full  text-[70px] mdl:text-[] text-center 2xl:text-[140px] text-titleDark font-bold font-manrope  uppercase'>Нозим Жумаев</h1>
         <p className=' mx-[13px] 2xl:w-[29%] 2xl:text-left 2xl:ml-[180px] 2xl:mx-0 text-center mt-[10px] text-[14px] font-semibold  text-[#686868]  2xl:text-[18px]'>Опытный бариатрический хирург с многолетней практикой. Специализируется на передовых методах хирургического лечения ожирения и смежных проблем</p>
@@ -27,25 +28,26 @@ const Banner: FC = () => {
 
 
 
-      <div className=' 2xl:hidden  overflow-hidden absolute bottom-0'>
-        <Image src={MbLeft} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[99]' />
+{/* Mobile elipse */}
+      <div className=' 2xl:hidden  h-[800px]   overflow-hidden absolute top-0'>
+        <Image src={MbLeft} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full  h-full  relative z-[99]' />
       </div>
-      <div className=' 2xl:hidden  overflow-hidden absolute bottom-0 right-0'>
-        <Image src={MbRigth} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[99]' />
+      <div className=' 2xl:hidden  h-[800px]   overflow-hidden absolute top-0 right-0'>
+        <Image src={MbRigth} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full  h-full  relative z-[99]' />
       </div>
 
-
-      <div className='hidden 2xl:block rounded-[20px] overflow-hidden absolute bottom-0'>
+{/* desktop elipse */}
+      <div className='hidden   2xl:block rounded-[20px] overflow-hidden absolute bottom-0'>
         <Image src={twoLeftImage} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[999]' />
       </div>
-      <div className='hidden 2xl:block rounded-[20px] overflow-hidden absolute bottom-0 right-0'>
+      <div className='hidden   2xl:block rounded-[20px] overflow-hidden absolute bottom-0 right-0'>
         <Image src={twoRigthImage} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[999]' />
       </div>
 
 
 
-
-      <div className='relative mt-[10px] z-[9999] 2xl:mt-[-230px] 2xl:ml-[-100px]'>
+      {/* image and button */}
+      <div className='relative mt-[10px]  z-[9999] 2xl:mt-[-230px] 2xl:ml-[-90px]'>
         <Image src={NozimImage} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full  2xl:h-[800px] h-[450px] relative z-[999]' />
         {/*  ELLIPSE */}
         <div className='absolute bottom-0   left-1/2 transform -translate-x-1/2 w-[300px] 2xl:w-[900px]'>
@@ -91,6 +93,8 @@ const Banner: FC = () => {
 
         </div>
       </div>
+      </div>
+     
     </div>
   )
 }
