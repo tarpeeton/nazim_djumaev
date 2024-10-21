@@ -71,7 +71,7 @@ const ReviewsCard: FC<IReviewsProps> = ({data}) => {
                                     </div>
                                     <div className='mt-[20px]'>
                                         <p className='text-titleDark font-manrope font-medium'>
-                                            {review.text[locale].length > 215 ? review.text[locale].slice(0, 215) + '...' : review.text[locale]}
+                                            {review.text[locale].length > 200 ? review.text[locale].slice(0, 200) + '...' : review.text[locale]}
                                         </p>
                                     </div>
 

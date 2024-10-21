@@ -31,16 +31,16 @@ const RecomendationsCards: FC = () => {
     <div>
       <div className='mx-[16px] 2xl:mx-[180px]'>
         <Title text={{ ru: "Рекомендации", uz: "Maslaxatlar" }} />
-        <div className='flex flex-col gap-[30px] mt-[20px] 2xl:mt-[60px] 2xl:flex-row 2xl:flex-wrap 2xl:justify-between 2xl:gap-[10px]'>
+        <div className='flex flex-col gap-[30px] mt-[20px] 2xl:mt-[60px] 2xl:flex-row 2xl:flex-wrap  2xl:gap-[22px]'>
           {
             recomendationPag.map((rec, index) => (
               <RecomendationCard key={index} slug={rec.slug} title={{ ru: rec.title.ru, uz: rec.title.uz }} subtitle={{ ru: rec.subtitle.ru, uz: rec.subtitle.uz }} image={rec.image} />
             ))
           }
         </div>
-        <div className='mt-[30px] 2xl:mt-[20px] w-full flex items-center justify-center'>
+        {recomendationPag.length >= 10 && (<div className='mt-[30px] 2xl:mt-[20px] w-full flex items-center justify-center'>
           <PaginationComponent totalPages={totalPages} currentPage={page} />
-        </div>
+        </div>) }
       </div>
     </div>
   )

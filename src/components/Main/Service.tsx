@@ -112,14 +112,7 @@ const Service: FC<IServiceProps> = ({ show }) => {
     const [active, setActive] = useState('all')
     const [filteredData, setFilteredData] = useState(data)
     const [number, setSliceNumber] = useState(6)
-
-
-
-    const slicedNumber = () => {
-        setSliceNumber((prev) => prev + number)
-    }
     const locale = useLocale()
-
     useEffect(() => {
         if (active === 'all') {
             setFilteredData(data)
@@ -128,9 +121,24 @@ const Service: FC<IServiceProps> = ({ show }) => {
         }
     }, [active])
 
+
+
+  
+
     const handleClick = (id: string) => {
         setActive(id)
     }
+
+
+    const slicedNumber = () => {
+        setSliceNumber(prev => Math.min(prev + 6, filteredData.length));
+    };
+
+    const sliceNumberToPrev = () => {
+        setSliceNumber(prev => Math.max(prev - 6, 6));
+    };
+
+
 
     return (
         <div className=' mx-[16px]   2xl:mx-[180px]'>
@@ -165,13 +173,13 @@ const Service: FC<IServiceProps> = ({ show }) => {
                     </Swiper>
                 </div>
 
-                <div className=' flex-row hidden 2xl:flex w-full gap-[35px]'>
+                <div className=' flex-row hidden 2xl:flex w-full'>
                     {serviceItems.map((name, index) => (
                         <button
                             onClick={() => handleClick(name.id)}
                             key={index}
-                            className={` pb-[10px] text-[13px]  font-bold font-manrope 2xl:text-[18px] 2xl:font-semibold ${active === name.id
-                                ? 'border-b-[3px] border-[#27BEFF] text-[#27BEFF]'
+                            className={` pb-[10px] text-[13px]  px-[30px] font-bold font-manrope 2xl:text-[18px] 2xl:font-semibold border-b-[2px] ${active === name.id
+                                ? ' border-[#27BEFF] text-[#27BEFF]'
                                 : 'text-[#3E3E3E]'
                                 }`}
                         >
@@ -192,7 +200,7 @@ const Service: FC<IServiceProps> = ({ show }) => {
                                 {data.description[locale]}
                             </p>
 
-                            <Link href={`/service/${data.slug}`} className='text-myBlue flex items-center font-bold mt-[20px] 2xl:absolute 2xl:bottom-[20px]'>
+                            <Link href={`/services/${data.slug}`} className='text-myBlue flex items-center font-bold mt-[20px] 2xl:absolute 2xl:bottom-[20px]'>
                                 Подробнее
                                 <MdOutlineNavigateNext size={25} className='mt-[3px] ml-[4px]' />
                             </Link>
@@ -203,15 +211,17 @@ const Service: FC<IServiceProps> = ({ show }) => {
                 </div>
 
                 {show ? (
-                    <Link href='/service' className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px] px-[40px] text-center mx-auto'>
+                    <Link href='/services' className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px] px-[40px] text-center mx-auto'>
                         Все услуги
                     </Link>
                 ) : (
-                    number < filteredData.length && (
+                    number < filteredData.length ? (
                         <button onClick={slicedNumber} className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px] px-[40px] text-center mx-auto'>
                             Показать еще
                         </button>
-                    )
+                    ) : <button onClick={sliceNumberToPrev} className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px] px-[40px] text-center mx-auto'>
+                    Скрыть 
+                </button>
                 )}
 
 

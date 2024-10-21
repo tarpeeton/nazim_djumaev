@@ -53,12 +53,9 @@ const FullReviewsModal: FC<IReviewFull> = ({ visible, close, review }) => {
                                                 </button>
                                             )}
                                             {review?.before.src && (
-
                                                 <div>
                                                     <Image src={review?.before.src} alt='After' width={100} height={100} className='w-full h-full object-cover ' />
                                                 </div>
-
-
                                             )}
                                             <p className='absolute bottom-[10px] text-[16px] 2xl:text-[18px] left-[10px] text-white font-extrabold font-manrope group-hover:hidden'>
                                                 До
@@ -89,7 +86,7 @@ const FullReviewsModal: FC<IReviewFull> = ({ visible, close, review }) => {
                                 </div>
                                 <div className='mt-[20px]'>
                                     <p className='text-titleDark font-manrope font-medium'>
-                                        {reviewText.length > 215 ? reviewText.slice(0, 215) + '...' : reviewText}
+                                        {reviewText}
                                     </p>
                                 </div>
                             </div>

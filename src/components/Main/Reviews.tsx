@@ -40,7 +40,7 @@ const Reviews: FC = () => {
                                 navigation={false} // Disable default navigation
                                 slidesPerView={1}
                                 spaceBetween={20}
-                                speed={600}
+                                speed={900}
                                 breakpoints={{
                                     1024: {
                                         slidesPerView: 2,

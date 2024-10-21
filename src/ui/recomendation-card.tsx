@@ -29,7 +29,7 @@ export const RecomendationCard: FC<IRecomendationProps> = ({slug , title , subti
             {title[locale]}
         </p>
         <p className='text-[15px] 2xl:text-[18px] font-medium text-[#949494] mt-[8px]'>
-           { subtitle[locale].length > 60 ? `${subtitle[locale].slice(0 , 60)} ...` : subtitle[locale]}
+           { subtitle[locale].length > 64 ? `${subtitle[locale].slice(0 , 64)} ...` : subtitle[locale]}
         </p>
         <Link href={`/recomendations/${slug}`} className='text-myBlue flex items-center font-bold mt-[20px] 2xl:absolute 2xl:bottom-[20px]'>
             Перейти
