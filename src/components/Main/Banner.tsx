@@ -36,16 +36,16 @@ const Banner: FC = () => {
 
 
       <div className='hidden 2xl:block rounded-[20px] overflow-hidden absolute bottom-0'>
-        <Image src={twoLeftImage} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[999]' />
+        <Image src={twoLeftImage} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[99]' />
       </div>
       <div className='hidden 2xl:block rounded-[20px] overflow-hidden absolute bottom-0 right-0'>
-        <Image src={twoRigthImage} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[999]' />
+        <Image src={twoRigthImage} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[99]' />
       </div>
 
 
 
 
-      <div className='relative h-[385px] 2xl:h-auto mt-[10px] z-[9999] 2xl:mt-[-230px] 2xl:ml-[-100px]'>
+      <div className='relative h-[385px] bn:h-[405px] 2xl:h-auto mt-[10px] z-[9999] 2xl:mt-[-230px] 2xl:ml-[-100px]'>
         <Image src={NozimImage} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full  2xl:h-[800px] h-[450px] relative z-[999]' />
         {/*  ELLIPSE */}
         <div className='absolute bottom-0   left-1/2 transform -translate-x-1/2 w-[400px] 2xl:w-[1000px]'>

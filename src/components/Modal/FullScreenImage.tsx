@@ -25,7 +25,7 @@ const FullScreenImage: FC<IFullScreenImage> = ({ open, src, close }) => {
   console.log(src)
   return (
 
-    <div className="fixed inset-0 z-[999999999999] flex items-center justify-center bg-black ">
+    <div className="fixed inset-0 z-[999999] flex items-center justify-center bg-black ">
       <div className="absolute top-4 right-4 cursor-pointer" onClick={close}>
         <span className="text-white text-2xl">✖</span> {/* Yopish tugmasi */}
       </div>

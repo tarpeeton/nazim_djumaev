@@ -14,7 +14,7 @@ const Header = ({ locale }: { locale: string }) => {
   const [menu, setMenu] = useState(false)
   const [mobileService, setMobileService] = useState(true)
   const [question, setQuestion] = useState(false)
- 
+
   const menuRef = useRef<HTMLDivElement | null>(null) // Create a ref for the menu
 
   const toggleOpenQuestion = () => {
@@ -49,39 +49,39 @@ const Header = ({ locale }: { locale: string }) => {
         </Link>
 
         {/* SERVICES */}
-        <div className='hidden 2xl:flex 2xl:flex-row 2xl:gap-[70px] z-[9999]'>
+        <div className='hidden 2xl:flex 2xl:flex-row 2xl:gap-[70px] z-[999]'>
           <Link href='/tours' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
             {t('about')}
           </Link>
           <Link href='/clinics' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
-             {t('service')}
+            {t('service')}
           </Link>
           <Link href='/sanatoriums' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
-             {t('contacts')}
+            {t('contacts')}
           </Link>
           <Link href='/hotels' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
             {t('reviews')}
           </Link>
         </div>
 
-      
+
 
         {/* SWITCHER AND HAMBURGER MENU */}
         <div className='flex flex-row items-center gap-[16px] 2xl:gap-[40px]  '>
-          
+
           <div className='w-[90px] flex items-center justify-center'>
             <LanguageSwitcher locale={locale} menu={false} />
           </div>
-          <button onClick={toggleMenuOpen} className='block 2xl:hidden relative z-[999]'>
+          <button onClick={toggleMenuOpen} className='block 2xl:hidden relative z-[9999]'>
             <RxHamburgerMenu size={30} className='text-black' />
           </button>
-          <button  className='hidden rounded-full mdl:block py-[13px] px-[25px] bg-[#27BEFF] text-center font-raleway text-white font-bold relative z-[9999] '>
-               Записаться
+          <button className='hidden rounded-full mdl:block py-[13px] px-[25px] bg-[#27BEFF] text-center font-raleway text-white font-bold relative z-[999] '>
+            Записаться
           </button>
         </div>
       </div>
 
-     
+
 
       {menu && (
         <div>
@@ -113,7 +113,7 @@ const Header = ({ locale }: { locale: string }) => {
                   <Link href='/partners' onClick={toggleMenuOpen} className='hover:text-green100 duration-300'>
                     Партнеры
                   </Link>
-                  <button  onClick={toggleOpenQuestion} className='text-left hover:text-green100 duration-300'>
+                  <button onClick={toggleOpenQuestion} className='text-left hover:text-green100 duration-300'>
                     Задать вопрос
                   </button>
                   <Link href='/blog' onClick={toggleMenuOpen} className='hover:text-green100 duration-300'>
