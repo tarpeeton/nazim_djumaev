@@ -61,9 +61,9 @@ const SomeFrom: FC = () => {
             <div className='2xl:w-[50%] 2xl:flex 2xl:justify-center mt-[40px] relative z-50 2xl:mt-0'>
 
                 <form onSubmit={handleSubmitService} className='2xl:w-[70%] flex flex-col gap-[20px]'>
-                    <FloatingLabelInput label='ФИО' id='1' type='name'
+                    <FloatingLabelInput errorMessage={{ru: 'это поля обязательно' , uz: ""}} label='ФИО' id='1' type='name'
                         setValue={setName} />
-                    <FloatingLabelInput label='Номер телефона' id='2' type='phone'
+                    <FloatingLabelInput errorMessage={{ru: 'это поля обязательно' , uz: ""}} label='Номер телефона' id='2' type='phone'
                         setValue={setPhone} />
                     <CustomSelect
                         setService={setService}

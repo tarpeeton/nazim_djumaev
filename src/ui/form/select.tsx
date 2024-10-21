@@ -16,7 +16,7 @@ export const CustomSelect: FC<CustomSelectProps> = ({ label, id, options  , setS
     const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
       const value = e.target.value
       setSelectedValue(value)
-      setService(value) // service qiymatini yangilash
+      setService(value)
     }
 
   return (

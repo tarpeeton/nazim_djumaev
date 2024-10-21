@@ -8,13 +8,13 @@ import { Link } from '@/i18n/routing'
 import { IoMdClose } from "react-icons/io"
 import { useTranslations } from 'next-intl'
 import Logo from '@/public/logo.png'
+import QuestionModal from './Modal/Request'
 
 const Header = ({ locale }: { locale: string }) => {
   const t = useTranslations('Header')
   const [menu, setMenu] = useState(false)
   const [mobileService, setMobileService] = useState(true)
   const [question, setQuestion] = useState(false)
-
   const menuRef = useRef<HTMLDivElement | null>(null) // Create a ref for the menu
 
   const toggleOpenQuestion = () => {
@@ -75,13 +75,13 @@ const Header = ({ locale }: { locale: string }) => {
           <button onClick={toggleMenuOpen} className='block 2xl:hidden relative z-[9999]'>
             <RxHamburgerMenu size={30} className='text-black' />
           </button>
-          <button className='hidden rounded-full mdl:block py-[13px] px-[25px] bg-[#27BEFF] text-center font-raleway text-white font-bold relative z-[999] '>
+          <button onClick={toggleOpenQuestion} className='hidden rounded-full mdl:block py-[13px] px-[25px] bg-[#27BEFF] text-center font-raleway text-white font-bold relative z-[999] '>
             Записаться
           </button>
         </div>
       </div>
 
-
+      {<QuestionModal  visible={question} close={toggleOpenQuestion}/>}
 
       {menu && (
         <div>
