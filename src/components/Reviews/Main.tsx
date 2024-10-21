@@ -27,7 +27,7 @@ export const ReviewsMain: FC = () => {
   const recomendationPag = Review.slice(startIndex, endIndex);
 
   return (
-    <div>
+    <div className='border-t border-[#E3E3E3]'>
         <div className='px-[16px] 2xl:px-[180px] mt-[40px] 2xl:mt-[60px]'>
             <Title text={{ru: "Отзывы" , uz: "Sharhlar"}} />
             <ReviewsCard data={recomendationPag} />

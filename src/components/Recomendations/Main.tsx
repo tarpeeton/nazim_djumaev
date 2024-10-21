@@ -9,7 +9,7 @@ import SomeFrom from '../Main/some-form'
 const MainRecomendations: FC = () => {
   return (
     <div>
-      <div className='mt-[40px] 2xl:mt-[60px]'>
+      <div className='pt-[40px] 2xl:pt-[60px] border-t border-[#E3E3E3]'>
         <RecomendationsCards />
         <SomeFrom />
       </div>

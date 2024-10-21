@@ -1,9 +1,19 @@
+'use client'
 import Title from '@/ui/Title'
 import Image from 'next/image'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import ImageAbout from '@/public/Main/Image.png'
+import QuestionModal from '../Modal/Request'
+
+
+
 
 const About: FC = () => {
+    const [open , setOpen] = useState(false)
+
+    const SwitcherModal = () => setOpen(!open)
+
+
     return (
         <div className=' mx-[16px] 2xl:mx-[180px]'>
             <Title  text={{ru: "Обо мне" , uz: "Men haqimda"}}/>
@@ -19,9 +29,10 @@ const About: FC = () => {
                         Врач регулярно повышает квалификацию на международных конференциях и семинарах. Имеет обширный опыт в проведении сложных операций, включая гастропластику и шунтирование. Особое внимание уделяет минимизации рисков и качественной реабилитации пациентов
                         </p>
                        
-                    <button className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px] px-[40px]'>
+                    <button onClick={SwitcherModal} className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px] px-[40px]'>
                     Записаться
                     </button>
+                    <QuestionModal  visible={open} close={SwitcherModal}/>
                 </div>
             </div>
         </div>

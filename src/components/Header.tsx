@@ -2,7 +2,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import LanguageSwitcher from './LanguageSwitcher' // Typo correction
 import Image from 'next/image'
-import { MdKeyboardArrowDown } from "react-icons/md"
 import { RxHamburgerMenu } from "react-icons/rx"
 import { Link } from '@/i18n/routing'
 import { IoMdClose } from "react-icons/io"
@@ -10,13 +9,14 @@ import { useTranslations } from 'next-intl'
 import Logo from '@/public/logo.png'
 import QuestionModal from './Modal/Request'
 
+
+
+
 const Header = ({ locale }: { locale: string }) => {
   const t = useTranslations('Header')
   const [menu, setMenu] = useState(false)
-  const [mobileService, setMobileService] = useState(true)
   const [question, setQuestion] = useState(false)
   const menuRef = useRef<HTMLDivElement | null>(null) // Create a ref for the menu
-
   const toggleOpenQuestion = () => {
     setQuestion(!question)
     toggleMenuOpen()
@@ -24,7 +24,6 @@ const Header = ({ locale }: { locale: string }) => {
   }
 
   const toggleMenuOpen = () => setMenu(!menu)
-  const toggleMobileService = () => setMobileService(!mobileService)
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -43,7 +42,7 @@ const Header = ({ locale }: { locale: string }) => {
 
   return (
     <React.Fragment>
-      <div className='flex flex-row justify-between bg-white px-[16px] py-[10px] slg:px-[20px] 2xl:px-[180px] '>
+      <div className='flex flex-row justify-between bg-white px-[16px] py-[10px] slg:px-[20px] 2xl:px-[180px]'>
         <Link href='/' className='logo flex items-center relative z-[999]'>
           <Image src={Logo} alt='Logo' width={60} height={60} quality={100} className='object-cover' />
         </Link>
