@@ -1,13 +1,13 @@
 "use client"
 import React, { FC, useState } from 'react'
 import { IReviewsData } from '@/constants/Rewiews'
-import Image from 'next/image'
+import Image  , {StaticImageData} from 'next/image'
 import { PhotoProvider, PhotoView } from 'react-photo-view'
 import 'react-photo-view/dist/react-photo-view.css'
 import useLocale from '@/hooks/useLocale'
 import { MdOutlineNavigateNext } from "react-icons/md"
-
-
+import FullReviewsModal from '../Modal/ShowMore'
+import { IShowMoreProps } from '@/interface/IReviews'
 
 
 interface IReviewsProps  {
@@ -15,18 +15,26 @@ interface IReviewsProps  {
 }
 
 
+
+
 const ReviewsCard: FC<IReviewsProps> = ({data}) => {
-   const locale = useLocale()
+    const locale = useLocale()
+    const [ShowMoreData , setShowMoreData] = useState<IShowMoreProps | null>(null)
+    const [open , setOpen] = useState(false)
 
-    const showMore = () => {
-
+    const showMore = (review: IShowMoreProps) => {
+        setShowMoreData(review)
+        setOpen(true)
     }
+
+    const handleOpenModel = () => setOpen(!open);
+
     return (
         <div className='mt-[30px] 2xl:mt-[40px]'>
             <div className='flex flex-col'>
                 <div className='flex flex-col 2xl:flex-row 2xl:flex-wrap gap-[20px]'>
                     {data.map((review , index) => (
-                        <div key={index} className='flex flex-row gap-[2%] cursor-pointer 2xl:w-[32%] relative '>
+                        <div  key={index} className='flex flex-row gap-[2%] cursor-pointer 2xl:w-[32%] relative '>
                             <div className='bg-white rounded-[20px] p-[20px] mt-[20px] mdl:w-[99%] 2xl:w-[99%]  2xl:h-[450px]'>
                                 <div className='flex flex-col'>
                                     <div className='border-b pb-[30px] border-[#E3E3E3] flex flex-row gap-[10px]'>
@@ -67,7 +75,7 @@ const ReviewsCard: FC<IReviewsProps> = ({data}) => {
                                         </p>
                                     </div>
 
-                                    <button onClick={showMore} className='text-myBlue flex items-center font-bold mt-[20px] 2xl:absolute 2xl:bottom-[20px]'>
+                                    <button onClick={() => showMore(review)} className='text-myBlue flex items-center font-bold mt-[20px] 2xl:absolute 2xl:bottom-[20px]'>
                                         Подробнее
                                         <MdOutlineNavigateNext size={25} className='mt-[3px] ml-[4px]' />
                                     </button>
@@ -76,7 +84,7 @@ const ReviewsCard: FC<IReviewsProps> = ({data}) => {
                             </div>
                         </div>
                     ))}
-
+                    <FullReviewsModal visible={open} close={handleOpenModel} review={ShowMoreData} />
                 </div>
                 
             </div>
