@@ -28,10 +28,10 @@ const Banner: FC = () => {
 
 
       <div className=' 2xl:hidden  overflow-hidden absolute bottom-0'>
-        <Image src={MbLeft} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[999]' />
+        <Image src={MbLeft} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[99]' />
       </div>
       <div className=' 2xl:hidden  overflow-hidden absolute bottom-0 right-0'>
-        <Image src={MbRigth} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[999]' />
+        <Image src={MbRigth} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[99]' />
       </div>
 
 

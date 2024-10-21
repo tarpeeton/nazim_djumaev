@@ -44,12 +44,12 @@ const Header = ({ locale }: { locale: string }) => {
   return (
     <React.Fragment>
       <div className='flex flex-row justify-between bg-white px-[16px] py-[10px] slg:px-[20px] 2xl:px-[180px] '>
-        <Link href='/' className='logo flex items-center relative z-[9999]'>
+        <Link href='/' className='logo flex items-center relative z-[999]'>
           <Image src={Logo} alt='Logo' width={60} height={60} quality={100} className='object-cover' />
         </Link>
 
         {/* SERVICES */}
-        <div className='hidden 2xl:flex 2xl:flex-row 2xl:gap-[70px] z-[9999999]'>
+        <div className='hidden 2xl:flex 2xl:flex-row 2xl:gap-[70px] z-[9999]'>
           <Link href='/tours' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
             {t('about')}
           </Link>
@@ -72,10 +72,10 @@ const Header = ({ locale }: { locale: string }) => {
           <div className='w-[90px] flex items-center justify-center'>
             <LanguageSwitcher locale={locale} menu={false} />
           </div>
-          <button onClick={toggleMenuOpen} className='block 2xl:hidden relative z-[9999999]'>
+          <button onClick={toggleMenuOpen} className='block 2xl:hidden relative z-[999]'>
             <RxHamburgerMenu size={30} className='text-black' />
           </button>
-          <button  className='hidden rounded-full mdl:block py-[13px] px-[25px] bg-[#27BEFF] text-center font-raleway text-white font-bold relative z-[9999999] '>
+          <button  className='hidden rounded-full mdl:block py-[13px] px-[25px] bg-[#27BEFF] text-center font-raleway text-white font-bold relative z-[9999] '>
                Записаться
           </button>
         </div>
