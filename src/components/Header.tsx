@@ -50,13 +50,13 @@ const Header = ({ locale }: { locale: string }) => {
 
         {/* SERVICES */}
         <div className='hidden 2xl:flex 2xl:flex-row 2xl:gap-[70px] z-[999]'>
-          <Link href='/tours' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
+          <Link href='/about' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
             {t('about')}
           </Link>
-          <Link href='/clinics' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
+          <Link href='/services' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
             {t('service')}
           </Link>
-          <Link href='/sanatoriums' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
+          <Link href='/contacts' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
             {t('contacts')}
           </Link>
           <Link href='/hotels' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
@@ -81,10 +81,10 @@ const Header = ({ locale }: { locale: string }) => {
         </div>
       </div>
 
-      {<QuestionModal  visible={question} close={toggleOpenQuestion}/>}
+      {<QuestionModal visible={question} close={toggleOpenQuestion} />}
 
       {menu && (
-        <div>
+        <div className=''>
           {/* Overlay */}
           <div className='fixed inset-0 bg-black opacity-50 z-[999998]' onClick={toggleMenuOpen} />
 
@@ -99,33 +99,22 @@ const Header = ({ locale }: { locale: string }) => {
               </div>
             </div>
 
-            <div className='flex flex-col px-[20px] mt-[25px]'>
-              <button onClick={toggleMobileService} className='flex flex-row items-center gap-[4px] slg:hidden'>
-                <p className='text-[#1AB2A6] text-[18px] font-semibold'>Услуги</p>
-                <MdKeyboardArrowDown size={28} className={`text-[#1AB2A6] ${mobileService ? "rotate-[180deg]" : ''}`} />
-              </button>
+            <div className='flex flex-col px-[20px] mt-[25px] '>
 
-              {mobileService && (
-                <div className='flex flex-col gap-[20px] text-[18px] font-medium mt-[20px] slg:text-[22px]'>
-                  <Link href='/about' onClick={toggleMenuOpen} className='hover:text-green100 duration-300'>
-                    О компании
-                  </Link>
-                  <Link href='/partners' onClick={toggleMenuOpen} className='hover:text-green100 duration-300'>
-                    Партнеры
-                  </Link>
-                  <button onClick={toggleOpenQuestion} className='text-left hover:text-green100 duration-300'>
-                    Задать вопрос
-                  </button>
-                  <Link href='/blog' onClick={toggleMenuOpen} className='hover:text-green100 duration-300'>
-                    Блог
-                  </Link>
-                  <Link href='/contacts' onClick={toggleMenuOpen} className='hover:text-green100 duration-300'>
-                    Контакты
-                  </Link>
-                </div>
-              )}
+              <div className='flex flex-col gap-[20px] text-[18px] font-medium mt-[20px] slg:text-[22px]'>
+                <Link href='/about' onClick={toggleMenuOpen} className='hover:text-green100 duration-300'>
+                  {t('about')}
+                </Link>
+                {t('service')}
+                <Link href='/blog' onClick={toggleMenuOpen} className='hover:text-green100 duration-300'>
+                  {t('contacts')}
+                </Link>
+                <Link href='/contacts' onClick={toggleMenuOpen} className='hover:text-green100 duration-300'>
+                  {t('reviews')}
+                </Link>
+              </div>
             </div>
-            <div className='flex flex-col gap-[16px] md:gap-[20px] absolute bottom-[40px] z-[9999] left-[20px]'>
+            {/* <div className='flex flex-col gap-[16px] md:gap-[20px] absolute bottom-[40px] z-[9999] left-[20px]'>
               <div className='flex flex-col text-[22px] font-bold slg:text-[28px] slg:font-semibold'>
                 <p>Здоровье и отдых в </p>
                 <p>одном путешествии!</p>
@@ -135,7 +124,7 @@ const Header = ({ locale }: { locale: string }) => {
                   Начать путешествие
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       )}
