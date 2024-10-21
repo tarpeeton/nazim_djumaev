@@ -1,12 +1,21 @@
-import Button from '@/ui/button'
+"use client"
+
+
 import SocialLicks from '@/ui/social-links'
 import Title from '@/ui/Title'
-import {FC} from 'react';
+import {FC , useState} from 'react';
 import YandexMap from '../Main/Map'
 import SomeFrom from '../Main/some-form'
+import QuestionModal from '../Modal/Request'
 
 
 export const MainContacts: FC = () => {
+    const [open , setOpen] = useState(false)
+
+    const handleQuestion = () => setOpen(!open)
+
+
+
   return (
     <div>
         <div className='mt-[40px] 2xl:mt-[60px] flex flex-col 2xl:flex-row px-[16px] 2xl:px-[180px] 2xl:justify-between'>
@@ -15,7 +24,9 @@ export const MainContacts: FC = () => {
                 <p className='text-[#949494] text-[16px] 2xl:text-[20px] font-medium font-manrope mt-[14px]'>
                 Свяжитесь со мной для записи на консультацию или получения дополнительной информации
                 </p>
-                <Button  text={{ru: 'Связаться' , uz: "Boglanish"}}/>
+                <button onClick={handleQuestion} className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px] px-[40px]'>
+                        Связаться
+                </button>
             </div>
             <div className='2xl:w-[50%] mt-[50px] 2xl:mt-0'>
                 <div className='pb-[40px] border-b border-[#E3E3E3]'>
@@ -38,6 +49,7 @@ export const MainContacts: FC = () => {
                 </div>
                 <SocialLicks />
             </div>
+            <QuestionModal visible={open} close={handleQuestion} />
         </div>
         <div className='px-[16px] 2xl:px-[180px] mt-[100px] 2xl:mt-[170px]'>
         <YandexMap />

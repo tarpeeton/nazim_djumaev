@@ -6,6 +6,7 @@ import Reviews from '@/components/Main/Reviews'
 import Risk from './Risk'
 import SomeFrom from '@/components/Main/some-form'
 import BackLink from '@/ui/back-link'
+import Faq from '@/components/Main/Faq'
 
 
 export const MainServiceWitgSlug: FC = () => {
@@ -21,6 +22,7 @@ export const MainServiceWitgSlug: FC = () => {
       <div className='px-[16px] 2xl:px-[180px]'>
           <Risk />
       </div>
+      <Faq />
       <SomeFrom />
     </div>
   )

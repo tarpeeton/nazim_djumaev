@@ -38,7 +38,7 @@ const SuccessModal: FC<ISuccess> = ({ visible, close }) => {
                     Ваша заявка успешно отправлена! В ближайшее время я свяжусь с вами
                     </p>
 
-                    <button  className='rounded-full w-[80%]  bg-[#27BEFF] py-[15px] px-[20px]  mx-auto text-center text-[16px]  2xl:text-[18px] text-white font-bold font-manrope  mt-[30px] 2xl:mt-[40px] '>
+                    <button onClick={close}  className='rounded-full w-[80%]  bg-[#27BEFF] py-[15px] px-[20px]  mx-auto text-center text-[16px]  2xl:text-[18px] text-white font-bold font-manrope  mt-[30px] 2xl:mt-[40px] '>
                         Закрыть
                     </button>
                 </div>

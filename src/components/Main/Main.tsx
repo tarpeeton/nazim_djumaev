@@ -7,6 +7,7 @@ import Advantages from './Advantages'
 import Sertificates from './Sertificates'
 import SomeFrom from './some-form'
 import Recomnedations from './Recomendations'
+import Faq from './Faq'
 
 
 const Main: FC = () => {
@@ -23,6 +24,7 @@ const Main: FC = () => {
       <Advantages />
       <SomeFrom />
       <Sertificates />
+      <Faq />
       <Recomnedations />
     </div>
   )
