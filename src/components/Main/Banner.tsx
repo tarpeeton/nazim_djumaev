@@ -83,7 +83,7 @@ const Banner: FC = () => {
                 repeatType: 'reverse'
               }}
             >
-              <HiCursorClick className='text-titleDark text-[40px] cursor-pointer' />
+              <HiCursorClick className=' text-myBlue text-[40px] cursor-pointer' />
             </motion.div>
 
           </motion.button>

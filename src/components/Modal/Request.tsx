@@ -5,8 +5,7 @@ import { IoClose } from "react-icons/io5"
 import { FloatingLabelInput } from '@/ui/form/input'
 import { CustomSelect } from '@/ui/form/select'
 import { consultation } from '@/lib/api'
-import Title from '@/ui/Title'
-
+import SuccessModal from './Success'
 
 interface IReviewFull {
     visible: boolean
@@ -16,7 +15,8 @@ const QuestionModal: FC<IReviewFull> = ({ visible, close }) => {
   const [name, setName] = useState<string>('')
   const [phone, setPhone] = useState<string>('')
   const [service, setService] = useState<string>('')
-
+const [success , setSuccess] = useState(false)
+    const handleOpenSuccess = () => setSuccess(!success)
 
   const handleSubmitService = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
@@ -27,7 +27,8 @@ const QuestionModal: FC<IReviewFull> = ({ visible, close }) => {
               service,
               "consultation"
           );
-          console.log(res);
+            setSuccess(true)
+          close();
       } catch (error) {
           console.log(error);
       }
@@ -64,7 +65,10 @@ const QuestionModal: FC<IReviewFull> = ({ visible, close }) => {
                         Отправить
                     </button>
                 </form>
+
             </Modal>
+            <SuccessModal  visible={success} close={handleOpenSuccess} />
+
         </div>
     )
 }

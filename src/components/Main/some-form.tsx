@@ -6,13 +6,14 @@ import { FloatingLabelInput } from '@/ui/form/input'
 import { CustomSelect } from '@/ui/form/select'
 import Image from 'next/image'
 import { consultation } from '@/lib/api'
+import SuccessModal from '../Modal/Success'
 
 const SomeFrom: FC = () => {
     const [name, setName] = useState<string>('')
     const [phone, setPhone] = useState<string>('')
     const [service, setService] = useState<string>('')
-
-
+    const [success , setSuccess] = useState(false)
+    const handleOpenSuccess = () => setSuccess(!success)
     const handleSubmitService = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
@@ -22,7 +23,7 @@ const SomeFrom: FC = () => {
                 service,
                 "consultation"
             );
-            console.log(res);
+            setSuccess(true)
         } catch (error) {
             console.log(error);
         }
@@ -58,6 +59,7 @@ const SomeFrom: FC = () => {
                     </button>
                 </div>
             </div>
+            <SuccessModal  visible={success} close={handleOpenSuccess} />
             <div className='2xl:w-[50%] 2xl:flex 2xl:justify-center mt-[40px] relative z-50 2xl:mt-0'>
 
                 <form onSubmit={handleSubmitService} className='2xl:w-[70%] flex flex-col gap-[20px]'>
