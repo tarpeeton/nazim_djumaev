@@ -45,6 +45,7 @@ const [success , setSuccess] = useState(false)
                 closeIcon={<IoClose size={25} />}
                 className="custom-modal z-[9999999999]"
                 width={500}
+                style={{ borderRadius: '30px' }}
             >
 
               <p className=' mt-[15px] font-extrabold font-manrope text-[20px] 2xl:text-[30px] text-titleDark 2xl:w-[60%]'>Записаться на прием</p>
