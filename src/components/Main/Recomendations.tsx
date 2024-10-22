@@ -21,7 +21,7 @@ const Recomnedations: FC = () => {
 
 
             <div className='mt-[30px] 2xl:mt-[20px] w-full flex items-center justify-center'>
-                <Link href='/service' className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px]  text-center mx-auto'>
+                <Link href='/recomendations' className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px]  text-center mx-auto'>
                     Все рекомендации
                 </Link>
             </div>

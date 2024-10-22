@@ -24,7 +24,7 @@ export const RecomendationsData: IRecomendationData[] = [
             ru: 'Успех операции и процесс восстановления во многом зависят от общего состояния здоровья пациента. Соблюдение правильного режима питания перед операцией способствует укреплению иммунной системы, снижению веса и уменьшению нагрузки на органы, участвующие в процессе метаболизма.',
             uz: 'Operatsiya muvaffaqiyati va tiklanish jarayoni asosan bemorning umumiy sogʻligʻiga bogʻliq. Operatsiya oldidan toʻgʻri ovqatlanish tartibiga rioya qilish immunitet tizimini mustahkamlash, vaznni kamaytirish va metabolizm jarayonida ishtirok etadigan organlarga yukni kamaytirishga yordam beradi.'
         },
-        image: "https://ucarecdn.com/3fafa2a8-fcb9-41b0-b2f7-b1effcff84b4/-/preview/467x300/",
+        image: "https://ucarecdn.com/b14d155c-999f-49b5-8b50-756eba82cd73/-/preview/1000x666/",
         options: [
             {
                 text: { 
@@ -75,7 +75,7 @@ export const RecomendationsData: IRecomendationData[] = [
             ru: 'Успех операции и процесс восстановления во многом зависят от общего состояния здоровья пациента. Соблюдение правильного режима питания перед операцией способствует укреплению иммунной системы, снижению веса и уменьшению нагрузки на органы, участвующие в процессе метаболизма.',
             uz: 'Operatsiya muvaffaqiyati va tiklanish jarayoni asosan bemorning umumiy sogʻligʻiga bogʻliq. Operatsiya oldidan toʻgʻri ovqatlanish tartibiga rioya qilish immunitet tizimini mustahkamlash, vaznni kamaytirish va metabolizm jarayonida ishtirok etadigan organlarga yukni kamaytirishga yordam beradi.'
         },
-        image: "https://ucarecdn.com/3fafa2a8-fcb9-41b0-b2f7-b1effcff84b4/-/preview/467x300/",
+        image: "https://ucarecdn.com/b14d155c-999f-49b5-8b50-756eba82cd73/-/preview/1000x666/",
         options: [
             {
                 text: { 
@@ -125,7 +125,7 @@ export const RecomendationsData: IRecomendationData[] = [
             ru: 'Успех операции и процесс восстановления во многом зависят от общего состояния здоровья пациента. Соблюдение правильного режима питания перед операцией способствует укреплению иммунной системы, снижению веса и уменьшению нагрузки на органы, участвующие в процессе метаболизма.',
             uz: 'Operatsiya muvaffaqiyati va tiklanish jarayoni asosan bemorning umumiy sogʻligʻiga bogʻliq. Operatsiya oldidan toʻgʻri ovqatlanish tartibiga rioya qilish immunitet tizimini mustahkamlash, vaznni kamaytirish va metabolizm jarayonida ishtirok etadigan organlarga yukni kamaytirishga yordam beradi.'
         },
-        image: "https://ucarecdn.com/3fafa2a8-fcb9-41b0-b2f7-b1effcff84b4/-/preview/467x300/",
+        image: "https://ucarecdn.com/b14d155c-999f-49b5-8b50-756eba82cd73/-/preview/1000x666/",
         options: [
             {
                 text: { 

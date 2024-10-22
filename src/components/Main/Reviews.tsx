@@ -104,7 +104,7 @@ const Reviews: FC = () => {
                                                                 <div className='w-[100px] relative h-[100px] rounded-[20px] overflow-hidden '>
                                                                     <div className='absolute w-full h-full bg-black bg-opacity-40' />
                                                                     <PhotoView src={review.before.src}>
-                                                                        <Image src={review.before} alt='sdf' width={100} height={100} className='w-full h-full object-cover' />
+                                                                        <Image src={review.before} alt='Reviews image' width={329} quality={100} height={480} className='w-full h-full object-cover' />
                                                                     </PhotoView>
 
                                                                     <p className='absolute bottom-[10px] text-[16p] 2xl:text-[18px] left-[10px] text-white font-extrabold font-manrope'>
@@ -114,7 +114,7 @@ const Reviews: FC = () => {
                                                                 <div className='w-[100px] h-[100px] relative rounded-[20px]  overflow-hidden '>
                                                                     <div className='absolute w-full h-full bg-black bg-opacity-40' />
                                                                     <PhotoView src={review.after.src}>
-                                                                        <Image src={review.after} alt='sdf' width={100} height={100} className='w-full h-full object-cover' />
+                                                                        <Image quality={100} src={review.after} alt='sdf' width={330} height={480} className='w-full h-full object-cover' />
                                                                     </PhotoView>
 
                                                                     <p className='absolute bottom-[10px] text-[16p] 2xl:text-[18px] left-[10px] text-white font-extrabold font-manrope'>

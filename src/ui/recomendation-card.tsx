@@ -21,8 +21,8 @@ export const RecomendationCard: FC<IRecomendationProps> = ({slug , title , subti
     
   return (
     <div className='2xl:w-[32%]'>
-    <div className='rounded-[20px] w-full '>
-        <Image src={image} alt='' width={600} height={800} className='w-full h-full object-cover ' />
+    <div className=' w-full '>
+        <Image src={image} alt='Recomendation Image' quality={100} width={4096} height={2731} className='w-full h-full object-cover rounded-[20px] ' />
     </div>
     <div className='mt-[10px] 2xl:pb-[60px] relative'>
         <p className='text-[20px] 2xl:text-[24px] font-bold text-titleDark'>
