@@ -1,5 +1,5 @@
 "use client"
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import Image from 'next/image'
 import NozimImage from '@/public/Main/nozim.png'
 import Arrow from '@/public/Arrow.png'
@@ -12,12 +12,17 @@ import MbLeft from '@/public/Main/mbLeft.png'
 import MbRigth from '@/public/Main/mbRigth.png'
 import { motion } from 'framer-motion'
 import { HiCursorClick } from "react-icons/hi"
+import QuestionModal from '../Modal/Request'
 
 
 
 
 
 const Banner: FC = () => {
+  const [open , setOpen] = useState(false)
+  const handleOpenModal = () => setOpen(!open)
+
+
   return (
     <div className='mt-[10px]  w-full overflow-hidden  2xl:h-[725px]'>
       <div className='flex flex-col w-full z-[999] relative'>
@@ -51,6 +56,8 @@ const Banner: FC = () => {
         </div>
         {/* FORM BUTTON */}
         <div className='absolute z-[9999] 2xl:right-[-325px] bottom-[50px] 2xl:bottom-[190px] flex flex-row w-full items-center gap-[20px] justify-center 2xl:flex-col'>
+          
+          <QuestionModal  visible={open} close={handleOpenModal}/>
 
           <Image src={Arrow} alt='Ellipse 5' width={130} height={100} className='block 2xl:hidden object-contain w-[130px] h-full mt-[50px]' />
           <Image src={Arrow2l} alt='Ellipse 5' width={130} height={100} className='hidden 2xl:block object-contain w-[130px] h-full mt-[50px] 2xl:rotate-[20deg]' />
@@ -60,6 +67,7 @@ const Banner: FC = () => {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
+            onClick={handleOpenModal}
           >
             Записаться на прием
 

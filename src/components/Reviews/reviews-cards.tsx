@@ -79,7 +79,6 @@ const ReviewsCard: FC<IReviewsProps> = ({data}) => {
                                         Подробнее
                                         <MdOutlineNavigateNext size={25} className='mt-[3px] ml-[4px]' />
                                     </button>
-
                                 </div>
                             </div>
                         </div>
