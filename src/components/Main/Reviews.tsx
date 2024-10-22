@@ -12,18 +12,25 @@ import Image from 'next/image'
 import { PhotoProvider, PhotoView } from 'react-photo-view'
 import 'react-photo-view/dist/react-photo-view.css'
 import { MdOutlineNavigateNext } from "react-icons/md"
-import { Link } from '@/i18n/routing'
 import Title from '@/ui/Title'
-
-
+import { IShowMoreProps } from '@/interface/IReviews'
+import FullReviewsModal from '../Modal/ShowMore'
 
 
 
 const Reviews: FC = () => {
     const swiperRef = useRef<any>(null)
-    const locale = useLocale()
     const [loading, setLoading] = useState(false)
+    const locale = useLocale()
+    const [ShowMoreData , setShowMoreData] = useState<IShowMoreProps | null>(null)
+    const [open , setOpen] = useState(false)
 
+    const showMore = (review: IShowMoreProps) => {
+        setShowMoreData(review)
+        setOpen(true)
+    }
+
+    const handleOpenModel = () => setOpen(!open);
 
 
     return (
@@ -130,10 +137,10 @@ const Reviews: FC = () => {
                                                             </p>
                                                         </div>
 
-                                                        <Link href={`/service/${review.slug}`} className='text-myBlue flex items-center font-bold mt-[20px] 2xl:absolute 2xl:bottom-[20px]'>
+                                                        <button onClick={() => showMore(review)} className='text-myBlue flex items-center font-bold mt-[20px] 2xl:absolute 2xl:bottom-[20px]'>
                                                             Подробнее
                                                             <MdOutlineNavigateNext size={25} className='mt-[3px] ml-[4px]' />
-                                                        </Link>
+                                                        </button>
 
                                                     </div>
                                                 </div>
@@ -143,7 +150,7 @@ const Reviews: FC = () => {
                                 )}
                             </Swiper>
                         </div>
-
+                        <FullReviewsModal visible={open} close={handleOpenModel} review={ShowMoreData} />
                         <div className='flex justify-end relative items-center mt-[30px]'>
                             <div className="flex flex-row gap-[8px]">
                                 <button

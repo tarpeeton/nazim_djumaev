@@ -58,7 +58,7 @@ const Header = ({ locale }: { locale: string }) => {
           <Link href='/contacts' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
             {t('contacts')}
           </Link>
-          <Link href='/hotels' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
+          <Link href='/reviews' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
             {t('reviews')}
           </Link>
         </div>
@@ -99,16 +99,17 @@ const Header = ({ locale }: { locale: string }) => {
             </div>
 
             <div className='flex flex-col px-[20px] mt-[25px] '>
-
               <div className='flex flex-col gap-[20px] text-[18px] font-medium mt-[20px] slg:text-[22px]'>
                 <Link href='/about' onClick={toggleMenuOpen} className='hover:text-green100 duration-300'>
                   {t('about')}
                 </Link>
-                {t('service')}
-                <Link href='/blog' onClick={toggleMenuOpen} className='hover:text-green100 duration-300'>
-                  {t('contacts')}
+                <Link href='/services' className='hover:text-green100 duration-300'>
+                  {t('service')}
                 </Link>
                 <Link href='/contacts' onClick={toggleMenuOpen} className='hover:text-green100 duration-300'>
+                  {t('contacts')}
+                </Link>
+                <Link href='/reviews' onClick={toggleMenuOpen} className='hover:text-green100 duration-300'>
                   {t('reviews')}
                 </Link>
               </div>
