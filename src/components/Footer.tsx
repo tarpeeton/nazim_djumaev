@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { MdOutlineNavigateNext } from "react-icons/md"
 
 import useLocale from '@/hooks/useLocale'
-import { FooterService, TopService } from '@/constants/Footer'
+import { FooterService } from '@/constants/Footer'
 import YandexMap from './Main/Map'
 import { usePathname } from 'next/navigation'
 import Logo from '@/public/logo.png'

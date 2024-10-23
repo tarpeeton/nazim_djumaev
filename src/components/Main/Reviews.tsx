@@ -35,9 +35,9 @@ const Reviews: FC = () => {
 
     return (
         <div>
-            <div className='mt-[120px] bg-[#F1F4F8] 2xl:pl-[200px]'>
+            <div className='mt-[120px] bg-[#F1F4F8] 2xl:pl-[180px]'>
                 <div >
-                    <div className='flex flex-col py-[40px] px-[20px]'>
+                    <div className='flex flex-col py-[40px] px-[20px] 2xl:px-0'>
                        
                         <Title  text={{ru: "Отзывы" , uz: "Sharhlar"}}/>
 

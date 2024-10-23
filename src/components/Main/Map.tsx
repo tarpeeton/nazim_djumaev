@@ -39,17 +39,13 @@ const YandexMap: FC = () => {
       // Check if Yandex Maps API is loaded and ready
       if (window.ymaps) {
         const map = new window.ymaps.Map('map', {
-          center: [41.351469, 69.289004],
+          center: [41.352400, 69.178595],
           zoom: 17,
           controls: [],
         });
 
         const placemark = new window.ymaps.Placemark(
-          [41.351469, 69.289004],
-          {
-            hintContent: 'Ташкент',
-            balloonContent: 'Чинобод 2, метро Шахристан',
-          },
+          [41.352400, 69.178595],
           {
             iconLayout: 'default#image',
             iconImageHref: 'https://ucarecdn.com/6a2da0ff-5a91-4beb-bf6b-8a08dadde686/-/preview/42x49/', // Ikonaning URL manzili (bu yerga rasm manzilini qo'shishingiz kerak)
