@@ -17,12 +17,7 @@ import { data } from '@/constants/Service'
 gsap.registerPlugin(ScrollTrigger)
 
 
-const serviceItems = [
-    { name: 'Все услуги', id: 'all' },
-    { name: 'Бариатрическая хирургия', id: 'bariatric' },
-    { name: 'Лапароскопическая хирургия', id: 'laparoscopic' },
-    { name: 'Эстетическая хирургия', id: 'aesthetic' }
-]
+
 
 interface IServiceProps {
     show: boolean
@@ -34,6 +29,20 @@ const Service: FC<IServiceProps> = ({ show }) => {
     const locale = useLocale()
     const serviceRef = useRef<HTMLDivElement | null>(null)
 
+
+    
+    const serviceItems = locale === 'ru' ? [
+        { name: 'Все услуги', id: 'all' },
+        { name: 'Бариатрическая хирургия', id: 'bariatric' },
+        { name: 'Лапароскопическая хирургия', id: 'laparoscopic' },
+        { name: 'Эстетическая хирургия', id: 'aesthetic' }
+    ] : [
+        { name: 'Barcha xizmatlar', id: 'all' },
+        { name: 'Bariatrik jarrohlik', id: 'bariatric' },
+        { name: 'Laparoskopik jarrohlik', id: 'laparoscopic' },
+        { name: 'Estetik jarrohlik', id: 'aesthetic' }
+    ];
+    
 
     const filteredData = useMemo(() => {
         if (active === 'all') return data
@@ -133,7 +142,8 @@ const Service: FC<IServiceProps> = ({ show }) => {
                             </p>
 
                             <Link href={`/services/${data.slug}`} className='text-myBlue flex items-center font-bold mt-[20px] 2xl:absolute 2xl:bottom-[20px]'>
-                                Подробнее
+                                
+                                {locale === 'ru' ? "Подробнее" : "Batafsil"}
                                 <MdOutlineNavigateNext size={25} className='mt-[3px] ml-[4px]' />
                             </Link>
                         </div>
@@ -142,17 +152,21 @@ const Service: FC<IServiceProps> = ({ show }) => {
 
                 {show && filteredData.length > number && (
                     <Link href='/services' className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px] px-[40px] text-center mx-auto'>
-                        Все услуги
+                        
+                        {locale === 'ru' ? "Все услуги" : "Barcha Xizmatlar"}
                     </Link>
                 )}
 
                 {!show && filteredData.length > 6 && (
-                    <button 
-                        onClick={number < filteredData.length ? slicedNumber : sliceNumberToPrev} 
-                        className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px] px-[40px] text-center mx-auto'
-                    >
-                        {number < filteredData.length ? 'Показать еще' : 'Скрыть'}
-                    </button>
+                   <button 
+                   onClick={number < filteredData.length ? slicedNumber : sliceNumberToPrev} 
+                   className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px] px-[40px] text-center mx-auto'
+               >
+                   {number < filteredData.length 
+                       ? (locale === 'ru' ? 'Показать еще' : "Ko'proq Ko'rsatish") 
+                       : (locale === 'ru' ? 'Скрыть' : 'Yopish')}
+               </button>
+               
                 )}
             </div>
         </div>

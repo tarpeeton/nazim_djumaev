@@ -1,5 +1,4 @@
 import {FC} from 'react';
-import About from '../Main/About'
 import Banner from './Banner'
 import Experience from './Experience'
 import Sertificates from '../Main/Sertificates'

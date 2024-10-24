@@ -42,7 +42,7 @@ export const MainServiceWitgSlug: FC = () => {
   return (
     <div>
       <div className='px-[16px] 2xl:px-[180px] mt-[20px] 2xl:mt-[30px]'>
-        <BackLink url='services' />
+        <BackLink url='/services' locale={locale} />
         <Video  title={filteredData?.title} description={filteredData?.description} />
         <Steps />
         <Advantages />

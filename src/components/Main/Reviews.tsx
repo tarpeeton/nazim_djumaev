@@ -20,7 +20,6 @@ import FullReviewsModal from '../Modal/ShowMore'
 
 const Reviews: FC = () => {
     const swiperRef = useRef<any>(null)
-    const [loading, setLoading] = useState(false)
     const locale = useLocale()
     const [ShowMoreData , setShowMoreData] = useState<IShowMoreProps | null>(null)
     const [open , setOpen] = useState(false)
@@ -38,16 +37,14 @@ const Reviews: FC = () => {
             <div className='mt-[120px] bg-[#F1F4F8] 2xl:pl-[180px]'>
                 <div >
                     <div className='flex flex-col py-[40px] px-[20px] 2xl:px-0'>
-                       
                         <Title  text={{ru: "Отзывы" , uz: "Sharhlar"}}/>
-
                         <div className='2xl:mt-[40px]'>
                             <Swiper
                                 modules={[Navigation]}
                                 navigation={false} // Disable default navigation
                                 slidesPerView={1}
                                 spaceBetween={20}
-                                speed={900}
+                                speed={1000}
                                 breakpoints={{
                                     1024: {
                                         slidesPerView: 2,
@@ -67,34 +64,8 @@ const Reviews: FC = () => {
                                     swiperRef.current = swiper // Assign the Swiper instance to the ref
                                 }}
                             >
-                                {loading ? ( // Conditional rendering for loading state
-                                    <SwiperSlide>
-                                        <div className='flex flex-row gap-[2%] cursor-default'>
-                                            <div className='bg-gray-200 w-full mdl:w-[48%] rounded-[20px] p-[20px] mt-[20px]  2xl:w-[31%] 2xl:h-[350px] animate-pulse'>
-                                                <div className='flex flex-col'>
-                                                    <div className='flex flex-row gap-[8px]'>
-                                                        <div className='w-[50px] h-[50px] rounded-full bg-gray-300' />
-                                                        <div className='flex flex-col'>
-                                                            <div className='h-[20px] w-[100px] bg-gray-300 rounded' />
-                                                            <div className='h-[15px] w-[80px] bg-gray-300 rounded mt-[8px]' />
-                                                        </div>
-                                                    </div>
-                                                    <div className='mt-[20px]'>
-                                                        <div className='h-[16px] w-[100%] bg-gray-300 rounded' />
-                                                        <div className='h-[16px] w-[100%] bg-gray-300 rounded mt-[8px]' />
-                                                        <div className='h-[16px] w-[100%] bg-gray-300 rounded mt-[8px]' />
-                                                        <div className='h-[16px] w-[100%] bg-gray-300 rounded mt-[8px]' />
-                                                        <div className='h-[16px] w-[90%] bg-gray-300 rounded mt-[8px]' />
-                                                        <div className='h-[16px] w-[80%] bg-gray-300 rounded mt-[8px]' />
-                                                        <div className='h-[16px] w-[80%] bg-gray-300 rounded mt-[8px]' />
-                                                        <div className='h-[16px] w-[70%] bg-gray-300 rounded mt-[8px]' />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </SwiperSlide>
-                                ) : (
-                                    Review.map((review, index) => (
+                               
+                                    {Review.map((review, index) => (
                                         <SwiperSlide key={index}>
                                             <div className='flex flex-row gap-[2%] cursor-pointer'>
                                                 <div className='bg-white rounded-[20px] p-[20px] mt-[20px] mdl:w-[99%] 2xl:w-[99%]  2xl:h-[450px]'>
@@ -108,7 +79,7 @@ const Reviews: FC = () => {
                                                                     </PhotoView>
 
                                                                     <p className='absolute bottom-[10px] text-[16p] 2xl:text-[18px] left-[10px] text-white font-extrabold font-manrope'>
-                                                                        До
+                                                                        {locale === 'ru' ? "До" : "Oldin"}
                                                                     </p>
                                                                 </div>
                                                                 <div className='w-[100px] h-[100px] relative rounded-[20px]  overflow-hidden '>
@@ -118,7 +89,7 @@ const Reviews: FC = () => {
                                                                     </PhotoView>
 
                                                                     <p className='absolute bottom-[10px] text-[16p] 2xl:text-[18px] left-[10px] text-white font-extrabold font-manrope'>
-                                                                        После
+                                                                    {locale === 'ru' ? "После" : "Keyin"}
                                                                     </p>
                                                                 </div>
                                                             </PhotoProvider>
@@ -138,7 +109,7 @@ const Reviews: FC = () => {
                                                         </div>
 
                                                         <button onClick={() => showMore(review)} className='text-myBlue flex items-center font-bold mt-[20px] 2xl:absolute 2xl:bottom-[20px]'>
-                                                            Подробнее
+                                                            {locale === 'ru' ? "Подробнее" : "Batafsil o'qish"}
                                                             <MdOutlineNavigateNext size={25} className='mt-[3px] ml-[4px]' />
                                                         </button>
 
@@ -146,8 +117,7 @@ const Reviews: FC = () => {
                                                 </div>
                                             </div>
                                         </SwiperSlide>
-                                    ))
-                                )}
+                                    ))}
                             </Swiper>
                         </div>
                         <FullReviewsModal visible={open} close={handleOpenModel} review={ShowMoreData} />

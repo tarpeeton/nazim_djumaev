@@ -1,4 +1,5 @@
 "use client"
+import useLocale from '@/hooks/useLocale'
 import { FC, useState } from 'react'
 import { FaAngleDown } from "react-icons/fa6"
 
@@ -12,7 +13,7 @@ interface CustomSelectProps {
 export const CustomSelect: FC<CustomSelectProps> = ({ label, id, options  , setService}) => {
     const [isFocused, setIsFocused] = useState(false)
     const [selectedValue, setSelectedValue] = useState('')
-  
+    const locale = useLocale()
     const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
       const value = e.target.value
       setSelectedValue(value)
@@ -33,7 +34,7 @@ export const CustomSelect: FC<CustomSelectProps> = ({ label, id, options  , setS
           }`}
         >
           <option value="" disabled>
-            Выберите услугу
+            {locale === 'ru' ?  'Выберите услугу' : "Xizmatni Tanlang" }
           </option>
           {options.map((option) => (
             <option key={option.value} value={option.value}>

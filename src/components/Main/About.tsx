@@ -5,6 +5,7 @@ import { FC, useState, useEffect, useRef } from 'react';
 import QuestionModal from '../Modal/Request';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import useLocale from '@/hooks/useLocale'
 
 // Регистрация плагина ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -12,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 const About: FC = () => {
     const [open, setOpen] = useState(false);
     const sectionRef = useRef<HTMLDivElement | null>(null); // Реф для отслеживания компонента
-
+    const locale = useLocale()
     const SwitcherModal = () => setOpen(!open);
 
     // Анимация при появлении компонента в области видимости
@@ -57,18 +58,22 @@ const About: FC = () => {
                         Нозим Жумаев — бариатрический хирург с более чем 10-летним опытом работы в области хирургии.
                         Специализируется на решении проблем, связанных с ожирением и нарушением метаболизма. Его основная
                         цель — помочь пациентам обрести здоровье через профессиональные методы лечения
+                        {locale  === 'ru' ? null : null }
+
                     </p>
                     <p className='mt-[15px] font-manrope text-[#686868] text-[15px] font-medium 2xl:text-[20px]'>
                         Врач регулярно повышает квалификацию на международных конференциях и семинарах. Имеет обширный
                         опыт в проведении сложных операций, включая гастропластику и шунтирование. Особое внимание
                         уделяет минимизации рисков и качественной реабилитации пациентов
+                        {locale  === 'ru' ? null : null }
+
                     </p>
 
                     <button
                         onClick={SwitcherModal}
                         className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px] px-[40px]'
                     >
-                        Записаться
+                        {locale  === 'ru' ? "Записаться" : 'Yozilish' }
                     </button>
                     <QuestionModal visible={open} close={SwitcherModal} />
                 </div>

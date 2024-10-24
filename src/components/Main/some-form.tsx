@@ -11,6 +11,8 @@ import { Flex, Spin } from 'antd'
 import { Link } from '@/i18n/routing'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import useLocale from '@/hooks/useLocale'
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -21,11 +23,11 @@ const SomeFrom: FC = () => {
     const [success, setSuccess] = useState(false)
     const handleOpenSuccess = () => setSuccess(!success)
     const [loading, setloading] = useState(false)
-
+    const locale = useLocale()
     const formRef = useRef<HTMLDivElement | null>(null)
 
     const handleSubmitService = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
+        e.preventDefault()
         setloading(true)
         try {
             const res = await consultation(name, phone, service, "consultation")
@@ -44,7 +46,7 @@ const SomeFrom: FC = () => {
                     start: 'top 80%', // Анимация начнется, когда форма попадет в 80% видимости экрана
                     toggleActions: 'play none none reset',
                 }
-            });
+            })
 
             timeline
                 .from(".title", { opacity: 0, y: -50, duration: 0.8, ease: "power3.out" })
@@ -52,11 +54,11 @@ const SomeFrom: FC = () => {
                 .from(".description", { opacity: 0, y: -30, duration: 0.6, ease: "power3.out" }, "-=0.6")
                 .from(".form-input", { opacity: 0, y: 30, stagger: 0.2, duration: 0.7, ease: "power3.out" }, "-=0.6")
                 .from(".submit-button", { opacity: 0, scale: 0.9, duration: 0.8, ease: "power3.out" }, "-=0.6")
-        }, formRef);
+        }, formRef)
 
         return () => {
-            ctx.revert(); // очищает GSAP анимацию при размонтировании компонента
-        };
+            ctx.revert() // очищает GSAP анимацию при размонтировании компонента
+        }
     }, [])
 
     return (
@@ -68,10 +70,11 @@ const SomeFrom: FC = () => {
 
             <div className='flex flex-col relative z-50'>
                 <div className='title'>
-                <Title text={{ ru: "Записаться на консультацию", uz: "Konsultatsiya uchun yozilish" }}  />
+                    <Title text={{ ru: "Записаться на консультацию", uz: "Konsultatsiya uchun yozilish" }} />
                 </div>
                 <p className='description text-[16px] 2xl:w-[50%] font-manrope text-[#686868] 2xl:text-[20px] mt-[13px]'>
-                    Заполните форму чтобы записаться на консультацию
+
+                    {locale === 'ru' ? 'Заполните форму чтобы записаться на консультацию !' : "Konsultatsiyag Yozilish Uchun Formani Toldiring !"}
                 </p>
                 <div className='social-links flex flex-row mt-[21px] gap-[10px]'>
                     <Link href='https://www.instagram.com/drnozim_adxamovich/' className='rounded-full border font-bold border-[#ABD6EA] w-[50px] h-[50px] flex items-center justify-center text-center'>
@@ -94,28 +97,39 @@ const SomeFrom: FC = () => {
             <div className='2xl:w-[50%] 2xl:flex 2xl:justify-center mt-[40px] relative z-50 2xl:mt-0'>
                 <form onSubmit={handleSubmitService} className='2xl:w-[70%] flex flex-col gap-[20px]'>
                     <div className='form-input'>
-                    <FloatingLabelInput errorMessage={{ ru: 'это поля обязательно', uz: "" }} label='ФИО' id='1' type='name'
-                        setValue={setName}  />
-                        </div>
-                        <div className='form-input'> 
-                        <FloatingLabelInput errorMessage={{ ru: 'это поля обязательно', uz: "" }} label='Номер телефона' id='2' type='phone'
-                        setValue={setPhone}  />
-                        </div>
-                   
-                   <div className='form-input'>
-                   <CustomSelect
-                        setService={setService}
-                        label="Выберите услугу"
-                        id="service"
-                        options={[{ value: 'consultation', label: 'Консультация' },{ value: 'diagnostics', label: 'Диагностика' },{ value: 'treatment', label: 'Лечение' },]}
-                    />
-                   </div>
+                        <FloatingLabelInput errorMessage={{ ru: 'это поля обязательно', uz: "majburiy maydon" }} label={locale === 'ru' ? 'ФИО' : "FISH"} id='1' type='name'
+                            setValue={setName} />
+                    </div>
+                    <div className='form-input'>
+                        <FloatingLabelInput errorMessage={{ ru: 'это поля обязательно', uz: "majburiy maydon" }}
+                            label={locale === 'ru' ? 'Номер телефона' : "Telefon Raqamingiz"}
+                            id='2' type='phone'
+                            setValue={setPhone} />
+                    </div>
+
+                    <div className='form-input'>
+                        <CustomSelect
+                            setService={setService}
+                            label={locale === 'ru' ? 'Выберите услугу' : "Xizmatni Tanlang"}
+                            id="service"
+                            options={locale === 'ru' ? [
+                                { value: 'Консультация', label: 'Консультация' },
+                                { value: 'Диагностика', label: 'Диагностика' },
+                                { value: 'Лечение', label: 'Лечение' },
+                            ] : [
+                                { value: 'Konsultatsiya', label: 'Konsultatsiya' },
+                                { value: 'Diagnostika', label: 'Diagnostika' },
+                                { value: 'Davolash', label: 'Davolash' },
+                            ]}
+                        />
+
+                    </div>
                     <button type='submit' className='submit-button rounded-full bg-white py-[15px] px-[20px] w-[80%] mx-auto text-center text-[16px] 2xl:text-[18px] text-[#5A9B8E] font-bold font-manrope 2xl:w-[70%] mt-[30px] 2xl:mt-[40px] 2xl:mx-0 flex items-center justify-center'>
                         {loading ? (
                             <Flex align="center" gap="middle" className='flex items-center justify-center'>
                                 <Spin className='w-[30px]' />
                             </Flex>
-                        ) : 'Отправить'}
+                        ) : (locale === 'ru' ? 'Отправить' : 'Yuborish')}
                     </button>
                 </form>
             </div>

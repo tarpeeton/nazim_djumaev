@@ -75,7 +75,8 @@ const Header = ({ locale }: { locale: string }) => {
             <RxHamburgerMenu size={30} className='text-black' />
           </button>
           <button onClick={toggleOpenQuestion} className='hidden rounded-full mdl:block py-[13px] px-[25px] bg-[#27BEFF] text-center font-raleway text-white font-bold relative z-[999] '>
-            Записаться
+            
+            {locale  === 'ru' ? "Записаться" : 'Yozilish' }
           </button>
         </div>
       </div>

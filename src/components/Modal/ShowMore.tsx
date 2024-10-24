@@ -46,8 +46,8 @@ const FullReviewsModal: FC<IReviewFull> = ({ visible, close, review }) => {
                                         <div className='w-[100px] relative h-[100px] rounded-[20px] overflow-hidden group'>
                                             <div  className='absolute  w-full h-full bg-black bg-opacity-40 group-hover:hidden' />
                                             {review?.before.src && (
-                                                <button onClick={() => handleImageViewFull(review?.before)} className='absolute hidden w-full h-full bg-black bg-opacity-40  group-hover:flex items-center justify-center text-center '>
-                                                    <div className='absolute w-full h-full  group-hover:flex items-center justify-center text-center '>
+                                                <button onClick={() => handleImageViewFull(review?.before)} className='absolute hidden w-full h-full bg-black bg-opacity-40  group-hover:flex items-center justify-center text-center transition-transform duration-400 ease-in-out '>
+                                                    <div className='absolute w-full h-full  transition-transform duration-500 ease-in-out  group-hover:flex items-center justify-center text-center '>
                                                         <IoSearchOutline size={40} className='text-white' />
                                                     </div>
                                                 </button>
@@ -58,7 +58,7 @@ const FullReviewsModal: FC<IReviewFull> = ({ visible, close, review }) => {
                                                 </div>
                                             )}
                                             <p className='absolute bottom-[10px] text-[16px] 2xl:text-[18px] left-[10px] text-white font-extrabold font-manrope group-hover:hidden'>
-                                                До
+                                                {locale === 'ru' ? "До" : "Oldin"}
                                             </p>
                                         </div>
                                         <div className='w-[100px] h-[100px] relative rounded-[20px] overflow-hidden group'>
@@ -73,7 +73,7 @@ const FullReviewsModal: FC<IReviewFull> = ({ visible, close, review }) => {
                                                     <Image src={review?.after.src} alt='After' width={100} height={100} className='w-full h-full object-cover' />
                                             )}
                                             <p className='absolute bottom-[10px] text-[16px] 2xl:text-[18px] left-[10px] text-white font-extrabold font-manrope group-hover:hidden'>
-                                                После
+                                                {locale === 'ru' ? "После" : "Keyin"}
                                             </p>
                                         </div>
                                 </div>

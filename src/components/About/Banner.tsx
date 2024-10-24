@@ -4,12 +4,13 @@ import Image from 'next/image'
 import { FC, useState } from 'react'
 import ImageAbout from '@/public/Main/Image.png'
 import QuestionModal from '../Modal/Request'
+import useLocale from '@/hooks/useLocale'
 
 
 
 const Banner: FC = () => {
     const [open, setOpen] = useState(false)
-
+    const locale = useLocale()
     const SwitcherModal = () => setOpen(!open)
 
     return (
@@ -25,10 +26,11 @@ const Banner: FC = () => {
                     </p>
                     <p className='mt-[15px] font-manrope text-[#686868] text-[15px] font-medium 2xl:text-[19px]'>
                         Врач регулярно повышает квалификацию на международных конференциях и семинарах. Имеет обширный опыт в проведении сложных операций, включая гастропластику и шунтирование. Особое внимание уделяет минимизации рисков и качественной реабилитации пациентов
+
                     </p>
 
                     <button onClick={SwitcherModal} className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px] px-[40px]'>
-                        Записаться
+                        {locale  === 'ru' ? "Записаться" : 'Yozilish' }
                     </button>
                     <QuestionModal visible={open} close={SwitcherModal} />
                 </div>

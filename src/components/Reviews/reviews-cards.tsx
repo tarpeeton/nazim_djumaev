@@ -46,7 +46,7 @@ const ReviewsCard: FC<IReviewsProps> = ({data}) => {
                                                 </PhotoView>
 
                                                 <p className='absolute bottom-[10px] text-[16p] 2xl:text-[18px] left-[10px] text-white font-extrabold font-manrope'>
-                                                    До
+                                                    {locale === 'ru' ? "До" : "Oldin"}
                                                 </p>
                                             </div>
                                             <div className='w-[100px] h-[100px] relative rounded-[20px]  overflow-hidden '>
@@ -56,7 +56,7 @@ const ReviewsCard: FC<IReviewsProps> = ({data}) => {
                                                 </PhotoView>
 
                                                 <p className='absolute bottom-[10px] text-[16p] 2xl:text-[18px] left-[10px] text-white font-extrabold font-manrope'>
-                                                    После
+                                                    {locale === 'ru' ? "После" : "Keyin"}
                                                 </p>
                                             </div>
                                         </PhotoProvider>
@@ -76,7 +76,7 @@ const ReviewsCard: FC<IReviewsProps> = ({data}) => {
                                     </div>
 
                                     <button onClick={() => showMore(review)} className='text-myBlue flex items-center font-bold mt-[20px] 2xl:absolute 2xl:bottom-[20px]'>
-                                        Подробнее
+                                        {locale === 'ru' ? "Подробнее" : "Batafsil o'qish"}
                                         <MdOutlineNavigateNext size={25} className='mt-[3px] ml-[4px]' />
                                     </button>
                                 </div>
