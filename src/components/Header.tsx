@@ -49,16 +49,16 @@ const Header = ({ locale }: { locale: string }) => {
 
         {/* SERVICES */}
         <div className='hidden 2xl:flex 2xl:flex-row 2xl:gap-[70px] z-[999]'>
-          <Link href='/about' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
+          <Link href='/about' className='2xl:font-medium flex flex-row gap-[10px]  hover:text-myBlue duration-300 ease-in-out text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
             {t('about')}
           </Link>
-          <Link href='/services' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
+          <Link href='/services' className='2xl:font-medium flex flex-row gap-[10px] hover:text-myBlue duration-300 ease-in-out text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
             {t('service')}
           </Link>
-          <Link href='/contacts' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
+          <Link href='/contacts' className='2xl:font-medium flex flex-row gap-[10px] hover:text-myBlue duration-300 ease-in-out text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
             {t('contacts')}
           </Link>
-          <Link href='/reviews' className='2xl:font-medium flex flex-row gap-[10px] text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
+          <Link href='/reviews' className='2xl:font-medium flex flex-row gap-[10px] hover:text-myBlue duration-300 ease-in-out text-[#242424] items-center   text-[20px] font-medium  font-manrope'>
             {t('reviews')}
           </Link>
         </div>
@@ -115,17 +115,7 @@ const Header = ({ locale }: { locale: string }) => {
                 </Link>
               </div>
             </div>
-            {/* <div className='flex flex-col gap-[16px] md:gap-[20px] absolute bottom-[40px] z-[9999] left-[20px]'>
-              <div className='flex flex-col text-[22px] font-bold slg:text-[28px] slg:font-semibold'>
-                <p>Здоровье и отдых в </p>
-                <p>одном путешествии!</p>
-              </div>
-              <div className='w-full mt-[16px]'>
-                <Link href='/' className="bg-greenButton py-[16px] px-[20px] rounded-[10px] text-[14px] font-bold w-full  mdl:text-[16px] text-white">
-                  Начать путешествие
-                </Link>
-              </div>
-            </div> */}
+           
           </div>
         </div>
       )}
