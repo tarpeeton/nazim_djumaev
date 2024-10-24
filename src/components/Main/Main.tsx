@@ -8,6 +8,7 @@ import Sertificates from './Sertificates'
 import SomeFrom from './some-form'
 import Recomnedations from './Recomendations'
 import Faq from './Faq'
+import VideoReview from '../Reviews/VideoReview'
 
 
 const Main: FC = () => {
@@ -20,7 +21,11 @@ const Main: FC = () => {
           <Service show={true} />
         </div>
       </div>
-      <Reviews />
+      {/* <Reviews /> */}
+      <div className='mt-[100px] 2xl:mt-[170px]'>
+      <VideoReview />
+
+      </div>
       <Advantages />
       <SomeFrom />
       <Sertificates />

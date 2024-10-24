@@ -30,7 +30,7 @@ const Faq: React.FC = () => {
 
   return (
     <div className="w-full px-[16px] 2xl:px-[180px] mt-[100px] 2xl:mt-[170px] ">
-      <Title oneText='Часто задаваемые вопросы' />
+      <Title text={{ru: 'Часто задаваемые вопросы' , uz: "Ko'p Beriladigan Savollar"}} />
       <div className='mt-[30px] mdl:mt-[40px] 2xl:mt-[50px]'>
         {faqData.map((item, index) => (
           <div key={index} className="mb-4">

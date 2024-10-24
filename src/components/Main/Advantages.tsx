@@ -7,6 +7,7 @@ import Title from '@/ui/Title'
 import gsap from 'gsap'
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import useLocale from '@/hooks/useLocale'
 gsap.registerPlugin(ScrollTrigger)
 
 
@@ -14,6 +15,8 @@ gsap.registerPlugin(ScrollTrigger)
 
 const Advantages: FC = () => {
     const advantageRef = useRef<HTMLDivElement | null>(null)
+    const locale = useLocale()
+
 
     useEffect(() => {
         const elements = advantageRef.current?.querySelectorAll('.advantage-item')
@@ -49,9 +52,12 @@ const Advantages: FC = () => {
                         <AiOutlineClockCircle className='text-myBlue' size={50} />
                     </div>
                     <div className='mt-[25px]  2xl:mt-[30px]'>
-                        <p className='text-[20px] 2xl:text-[22px] text-titleDark font-manrope font-bold'>Многолетний опыт</p>
+                        <p className='text-[20px] 2xl:text-[22px] text-titleDark font-manrope font-bold'>
+                            
+                            {locale === 'ru' ? 'Многолетний опыт' : "Ko'p Yillik Tajriba"}    
+                        </p>
                         <p className='text-[15px] 2xl:text-[18px] text-[#686868] font-manrope font-medium mt-[10px]'>
-                            Более 10 лет практики в области бариатрической хирургии, успешные операции с отличными результатами
+                            {locale === 'ru' ? 'Более 10 лет практики в области бариатрической хирургии, успешные операции с отличными результатами' : "10 yildan ortiq bariatrik jarrohlik amaliyoti, ajoyib natijalar bilan muvaffaqiyatli operatsiyalar"}    
                         </p>
                     </div>
                 </div>
@@ -61,9 +67,16 @@ const Advantages: FC = () => {
                         <BsStars className='text-myBlue' size={50} />
                     </div>
                     <div className='mt-[25px]  2xl:mt-[30px]'>
-                        <p className='text-[20px] 2xl:text-[22px] text-titleDark font-manrope font-bold'>Индивидуальный подход</p>
+                        <p className='text-[20px] 2xl:text-[22px] text-titleDark font-manrope font-bold'>
+                            
+                            {locale === 'ru' ? 'Индивидуальный подход' : "Shaxsiy yondashuv"}    
+                            
+                            </p>
                         <p className='text-[15px] 2xl:text-[18px] text-[#686868] font-manrope font-medium mt-[10px]'>
-                            Индивидуальный подход, основанный на потребностях каждого пациента
+                            
+                            
+                            {locale === 'ru' ? 'Индивидуальный подход, основанный на потребностях каждого пациента' : "Har bir bemorning ehtiyojlariga asoslangan individual yondashuv"}    
+
                         </p>
                     </div>
                 </div>
@@ -73,9 +86,15 @@ const Advantages: FC = () => {
                         <MdLocalHospital className='text-myBlue' size={50} />
                     </div>
                     <div className='mt-[25px]  2xl:mt-[30px]'>
-                        <p className='text-[20px] 2xl:text-[22px] text-titleDark font-manrope font-bold'>Современные технологии</p>
+                        <p className='text-[20px] 2xl:text-[22px] text-titleDark font-manrope font-bold'>
+                            
+                            {locale === 'ru' ? 'Современные технологии' : "Zamonaviy texnologiyalar"}    
+                            
+                            </p>
                         <p className='text-[15px] 2xl:text-[18px] text-[#686868] font-manrope font-medium mt-[10px]'>
-                            Использование современных технологий и оборудования для максимальной безопасности
+                            
+                            {locale === 'ru' ? 'Использование современных технологий и оборудования для максимальной безопасности' : "Xavfsizlikni maksimal darajada oshirish uchun zamonaviy texnologiyalar va uskunalardan foydalanish"}    
+
                         </p>
                     </div>
                 </div>

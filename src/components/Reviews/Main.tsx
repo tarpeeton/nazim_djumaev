@@ -28,12 +28,15 @@ export const ReviewsMain: FC = () => {
 
   return (
     <div className='border-t border-[#E3E3E3]'>
-        <div className='px-[16px] 2xl:px-[180px] mt-[40px] 2xl:mt-[60px]'>
+        {/* <div className='px-[16px] 2xl:px-[180px] mt-[40px] 2xl:mt-[60px]'>
             <Title text={{ru: "Отзывы" , uz: "Sharhlar"}} />
             <ReviewsCard data={recomendationPag} />
+        </div> */}
+        <div  className='mt-[40px] 2xl:mt-[60px]'>
+        <VideoReview />
+
         </div>
-          <VideoReview />
-          <PaginationComponent currentPage={page} totalPages={totalPages}/>
+          {/* <PaginationComponent currentPage={page} totalPages={totalPages}/> */}
           <SomeFrom />
     </div>
   );

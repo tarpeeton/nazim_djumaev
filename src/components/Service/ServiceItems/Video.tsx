@@ -7,11 +7,12 @@ import { IoIosPlay } from "react-icons/io"
 
 interface IVideoProps {
     title?: string ,
-    description?: string
+    description?: string,
+    video: string | ''
 }
 
 
-const Video: FC<IVideoProps> = ({title ,  description}) => {
+const Video: FC<IVideoProps> = ({title ,  description , video}) => {
     const [isClient, setIsClient] = useState(false)
     const [isPlaying, setIsPlaying] = useState(false)
 
@@ -29,30 +30,34 @@ const Video: FC<IVideoProps> = ({title ,  description}) => {
                 {description}
             </p>
 
-            <div className="mt-[35px] 2xl:mt-[50px] w-full rounded-[15px] h-[210px] relative  2xl:h-[570px]">
-                {isClient && (
-                    <ReactPlayer
-                        url="https://youtu.be/yQtcgfNB6HU?si=b91IbFVh0x76KBF4"
-                        playing={isPlaying}
-                        controls={true}
-                        width="100%"
-                        height="100%"
-                        light={true} // Show thumbnail before playing
-                        playIcon={
-                            <div className=" inset-0 flex items-center justify-center  bg-opacity-50 cursor-pointer 2xl:h-[500px] h-[210px]">
-                                <div className='rounded-full w-[90px] h-[90px] flex items-center justify-center border border-white'>
-                                    <button className="rounded-full bg-white  w-[65px] h-[65px] flex items-center justify-center text-center">
-                                        <IoIosPlay className='text-myBlue' size={29} />
-                                    </button>
-                                </div>
 
-                            </div>
-                        }
-                        onClickPreview={() => setIsPlaying(true)} // Start playing after clicking on the thumbnail
-                        pip={true}
-                    />
-                )}
-            </div>
+            {video?.length > 0 && (
+                 <div className="mt-[35px] 2xl:mt-[50px] w-full rounded-[15px] h-[210px] relative  2xl:h-[570px]">
+                 {isClient && (
+                     <ReactPlayer
+                         url={video}
+                         playing={isPlaying}
+                         controls={true}
+                         width="100%"
+                         height="100%"
+                         light={true} // Show thumbnail before playing
+                         playIcon={
+                             <div className=" inset-0 flex items-center justify-center  bg-opacity-50 cursor-pointer 2xl:h-[500px] h-[210px]">
+                                 <div className='rounded-full w-[90px] h-[90px] flex items-center justify-center border border-white'>
+                                     <button className="rounded-full bg-white  w-[65px] h-[65px] flex items-center justify-center text-center">
+                                         <IoIosPlay className='text-myBlue' size={29} />
+                                     </button>
+                                 </div>
+ 
+                             </div>
+                         }
+                         onClickPreview={() => setIsPlaying(true)} // Start playing after clicking on the thumbnail
+                         pip={true}
+                     />
+                 )}
+             </div>
+            )}
+           
         </div>
     )
 }

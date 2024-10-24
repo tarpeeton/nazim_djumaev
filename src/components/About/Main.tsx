@@ -4,6 +4,7 @@ import Experience from './Experience'
 import Sertificates from '../Main/Sertificates'
 import Reviews from '../Main/Reviews'
 import SomeFrom from '../Main/some-form'
+import VideoReview from '../Reviews/VideoReview'
 
 
 export const AboutMain: FC = () => {
@@ -12,7 +13,10 @@ export const AboutMain: FC = () => {
         <Banner />
         <Experience />
         <Sertificates />
-        <Reviews />
+        {/* <Reviews /> */}
+        <div className='mt-[100px] 2xl:mt-[170px]'>
+            <VideoReview />
+      </div>
         <SomeFrom />
     </div>
   );

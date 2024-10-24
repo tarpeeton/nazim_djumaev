@@ -1,11 +1,13 @@
+"use client"
 import { FC } from 'react'
 import { Link } from '@/i18n/routing'
 import Title from '@/ui/Title'
 import { RecomendationsData } from '@/constants/Recomendations'
 import {RecomendationCard} from '@/ui/recomendation-card'
-
+import useLocale from '@/hooks/useLocale'
 
 const Recomnedations: FC = () => {
+    const locale = useLocale()
     return (
         <div className='mx-[16px] 2xl:mx-[180px] mt-[100px] 2xl:mt-[170px]'>
             <Title  text={{ru: "Рекомендации" , uz: "Maslaxatlar"}}/>
@@ -16,7 +18,7 @@ const Recomnedations: FC = () => {
             </div>
             <div className='mt-[30px] 2xl:mt-[20px] w-full flex items-center justify-center'>
                 <Link href='/recomendations' className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px]  text-center mx-auto'>
-                    Все рекомендации
+                    {locale === 'ru' ? 'Все рекомендации' : 'Barcha Maslaxatlar'}
                 </Link>
             </div>
 

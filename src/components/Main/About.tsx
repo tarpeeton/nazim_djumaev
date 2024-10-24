@@ -55,17 +55,13 @@ const About: FC = () => {
                 </div>
                 <div className='flex flex-col mt-[25px] 2xl:mt-0 2xl:order-[-1] 2xl:w-[45%]'>
                     <p className='text-[#686868] font-manrope text-[15px] font-medium 2xl:text-[20px]'>
-                        Нозим Жумаев — бариатрический хирург с более чем 10-летним опытом работы в области хирургии.
-                        Специализируется на решении проблем, связанных с ожирением и нарушением метаболизма. Его основная
-                        цель — помочь пациентам обрести здоровье через профессиональные методы лечения
-                        {locale  === 'ru' ? null : null }
+                       
+                        {locale  === 'ru' ? " Нозим Жумаев — бариатрический хирург с более чем 10-летним опытом работы в области хирургии.Специализируется на решении проблем, связанных с ожирением и нарушением метаболизма. Его основная цель — помочь пациентам обрести здоровье через профессиональные методы лечения" : "Nozim Jumaev-jarrohlik sohasida 10 yildan ortiq tajribaga ega bariatrik jarroh. Semizlik va metabolik kasalliklar bilan bog'liq muammolarni hal qilishga ixtisoslashgan. Uning asosiy maqsad-bemorlarga professional davolash usullari orqali sog'lig'ini tiklashga yordam berish" }
 
                     </p>
                     <p className='mt-[15px] font-manrope text-[#686868] text-[15px] font-medium 2xl:text-[20px]'>
-                        Врач регулярно повышает квалификацию на международных конференциях и семинарах. Имеет обширный
-                        опыт в проведении сложных операций, включая гастропластику и шунтирование. Особое внимание
-                        уделяет минимизации рисков и качественной реабилитации пациентов
-                        {locale  === 'ru' ? null : null }
+                       
+                        {locale  === 'ru' ? ' Врач регулярно повышает квалификацию на международных конференциях и семинарах. Имеет обширный опыт в проведении сложных операций, включая гастропластику и шунтирование. Особое внимание уделяет минимизации рисков и качественной реабилитации пациентов' : "Shifokor xalqaro konferentsiyalar va seminarlarda muntazam ravishda malaka oshiradi. Keng qamrovli gastroplastika va bypass operatsiyasini o'z ichiga olgan murakkab operatsiyalarni bajarish tajribasi. Maxsus e'tibor xatarlarni minimallashtirish va bemorlarni sifatli reabilitatsiya qilishga bag'ishlangan" }
 
                     </p>
 
