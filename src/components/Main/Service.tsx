@@ -1,6 +1,6 @@
 'use client'
 import Title from '@/ui/Title'
-import { FC, useState, useEffect, useRef } from 'react'
+import { FC, useState, useEffect, useRef  , useMemo} from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import 'swiper/swiper-bundle.css'
@@ -30,18 +30,16 @@ interface IServiceProps {
 
 const Service: FC<IServiceProps> = ({ show }) => {
     const [active, setActive] = useState('all')
-    const [filteredData, setFilteredData] = useState(data)
     const [number, setSliceNumber] = useState(6)
     const locale = useLocale()
     const serviceRef = useRef<HTMLDivElement | null>(null)
 
-    useEffect(() => {
-        if (active === 'all') {
-            setFilteredData(data)
-        } else {
-            setFilteredData(data.filter(item => item.serviceID === active))
-        }
+
+    const filteredData = useMemo(() => {
+        if (active === 'all') return data
+        return data.filter(item => item.serviceID === active)
     }, [active])
+   
 
     // Анимация с GSAP и ScrollTrigger
     useEffect(() => {
@@ -130,7 +128,8 @@ const Service: FC<IServiceProps> = ({ show }) => {
                                 {data.name[locale]}
                             </p>
                             <p className='text-[#686868] 2xl:text-[18px] font-semibold mt-[12px]'>
-                                {data.description[locale]}
+                            {`${data.description[locale].length > 94 ? data.description[locale].slice(0, 94) + '...' : data.description[locale]}`}
+
                             </p>
 
                             <Link href={`/services/${data.slug}`} className='text-myBlue flex items-center font-bold mt-[20px] 2xl:absolute 2xl:bottom-[20px]'>
@@ -141,20 +140,19 @@ const Service: FC<IServiceProps> = ({ show }) => {
                     ))}
                 </div>
 
-                {show ? (
+                {show && filteredData.length > number && (
                     <Link href='/services' className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px] px-[40px] text-center mx-auto'>
                         Все услуги
                     </Link>
-                ) : (
-                    number < filteredData.length ? (
-                        <button onClick={slicedNumber} className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px] px-[40px] text-center mx-auto'>
-                            Показать еще
-                        </button>
-                    ) : (
-                        <button onClick={sliceNumberToPrev} className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px] px-[40px] text-center mx-auto'>
-                            Скрыть
-                        </button>
-                    )
+                )}
+
+                {!show && filteredData.length > 6 && (
+                    <button 
+                        onClick={number < filteredData.length ? slicedNumber : sliceNumberToPrev} 
+                        className='w-[200px] 2xl:w-[230px] mt-[30px] 2xl:mt-[40px] rounded-full bg-[#27BEFF] text-white font-bold py-[18px] px-[40px] text-center mx-auto'
+                    >
+                        {number < filteredData.length ? 'Показать еще' : 'Скрыть'}
+                    </button>
                 )}
             </div>
         </div>

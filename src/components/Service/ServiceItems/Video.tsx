@@ -3,7 +3,15 @@
 import { FC, useEffect, useState } from 'react'
 import ReactPlayer from 'react-player'
 import { IoIosPlay } from "react-icons/io"
-const Video: FC = () => {
+
+
+interface IVideoProps {
+    title?: string ,
+    description?: string
+}
+
+
+const Video: FC<IVideoProps> = ({title ,  description}) => {
     const [isClient, setIsClient] = useState(false)
     const [isPlaying, setIsPlaying] = useState(false)
 
@@ -15,12 +23,10 @@ const Video: FC = () => {
     return (
         <div className="mt-[25px] 2xl:mt-[35px] relative">
             <p className="text-[25px] 2xl:text-[50px] text-titleDark font-extrabold font-manrope w-[90%] 2xl:w-[70%]">
-                Гастропластика (рукавная резекция желудка)
+                {title}
             </p>
             <p className="text-[15px] 2xl:text-[20px] text-[#686868] mt-[15px] 2xl:mt-[20px]">
-                Гастропластика — это операция по уменьшению объема желудка путем
-                удаления его части, что помогает ограничить потребление пищи и
-                способствует потере веса
+                {description}
             </p>
 
             <div className="mt-[35px] 2xl:mt-[50px] w-full rounded-[15px] h-[210px] relative  2xl:h-[570px]">

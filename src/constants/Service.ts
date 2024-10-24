@@ -14,61 +14,74 @@ export const data = [
     {
         name: {
             ru: "Шунтирование желудка",
-            uz: "Oshqozon shuntlash"
+            uz: ""
         },
         description: {
-            ru: "Операция, позволяющая снизить всасывание пищи в кишечнике для коррекции метаболических проблем",
-            uz: "Metabolik muammolarni tuzatish uchun ozuqaning ichakda so'rilishini kamaytiradigan operatsiya"
+            ru: "Операция по шунтированию желудка включает создание небольшого желудочного мешка и изменение пути прохождения пищи, чтобы ограничить объем пищи и снизить количество калорий, усваиваемых организмом.",
+            uz: ""
         },
-        slug: "shuntirovanie-zheludka",
+        slug: "shuntirovanie-jeludka",
         serviceID: "bariatric"
     },
     {
         name: {
             ru: "Лапароскопическая регулировка желудочного бандажа",
-            uz: "Laparoskopik oshqozon bandaji sozlash"
+            uz: ""
         },
         description: {
-            ru: "Операция, при которой вокруг верхней части желудка размещается специальный силиконовый бандаж",
-            uz: "Maxsus silikon bandaj yordamida oshqozonning yuqori qismi o'raladigan jarrohlik amaliyoti"
+            ru: "Лапароскопическая установка регулируемого желудочного бандажа – это операция, при которой вокруг верхней части желудка размещается специальный силиконовый бандаж. Он регулируется с помощью жидкости, что позволяет контролировать объем пищи, который может употреблять пациент.",
+            uz: ""
         },
-        slug: "laparoskopicheskaya-regulirovka",
+        slug: "jeludojnava-bandaja",
         serviceID: "bariatric"
     },
     {
         name: {
             ru: "Лапароскопическая холецистэктомия (удаление желчного пузыря)",
-            uz: "Laparoskopik xoletsistektomiya (o't pufagini olib tashlash)"
+            uz: ""
         },
         description: {
-            ru: "Одна из самых распространенных процедур удаления желчного пузыря",
-            uz: "O't pufagini olib tashlash bo'yicha eng keng tarqalgan jarrohlik amaliyotlaridan biri"
+            ru: "Лапароскопическое удаление желчного пузыря является одной из самых распространенных процедур и используется для лечения желчнокаменной болезни и других патологий желчного пузыря.",
+            uz: ""
         },
-        slug: "laparoskopicheskaya-kholecistektomiya",
+        slug: "laparoskopicheskiy-xolesistektomiya",
         serviceID: "laparoscopic"
     },
     {
         name: {
             ru: "Лапароскопическая герниопластика (операция по удалению грыжи)",
-            uz: "Laparoskopik hernioplastika (chanoqni olib tashlash operatsiyasi)"
+            uz: ""
         },
         description: {
-            ru: "Используется для восстановления грыжи (выпячивания органа через слабые участки брюшной стенки)",
-            uz: "Chanoqning qayta tiklanishi uchun ishlatiladigan jarrohlik (organlarning qorin devorining zaif joylari orqali chiqishi)"
+            ru: "Лапароскопическое удаление желчного пузыря является одной из самых распространенных процедур и используется для лечения желчнокаменной болезни и других патологий желчного пузыря.",
+            uz: ""
         },
-        slug: "laparoskopicheskaya-gernioplastika",
+        slug: "laparoskopicheskiy-gernioplastika",
+        serviceID: "laparoscopic"
+    },
+    {
+        name: {
+            ru: "Лапароскопическая герниопластика (операция по удалению грыжи)",
+            uz: ""
+        },
+        description: {
+            ru: "Лапароскопическое удаление желчного пузыря является одной из самых распространенных процедур и используется для лечения желчнокаменной болезни и других патологий желчного пузыря.",
+            uz: ""
+        },
+        slug: "laparoskopicheskiy-gernioplastika",
         serviceID: "laparoscopic"
     },
     {
         name: {
             ru: "Абдоминопластика (пластика живота)",
-            uz: "Abdominoplastika (qorinni qayta tiklash)"
+            uz: ""
         },
         description: {
-            ru: "Процедура, направленная на удаление лишней кожи и жира с живота, а также на восстановление мышц",
-            uz: "Qorindagi ortiqcha teri va yog'larni olib tashlash, mushaklarni tiklash bo'yicha jarrohlik amaliyoti"
+            ru: "Абдоминопластика – это процедура, направленная на удаление лишней кожи и жира с живота, а также на восстановление мышечного каркаса для придания более подтянутого внешнего вида.",
+            uz: ""
         },
         slug: "abdominoplastika",
         serviceID: "aesthetic"
-    }
+    },
+   
 ]
