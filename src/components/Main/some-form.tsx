@@ -12,7 +12,7 @@ import { Link } from '@/i18n/routing'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import useLocale from '@/hooks/useLocale'
-
+import { counter } from '@/lib/api'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -77,16 +77,16 @@ const SomeFrom: FC = () => {
                     {locale === 'ru' ? 'Заполните форму чтобы записаться на консультацию !' : "Konsultatsiyag Yozilish Uchun Formani Toldiring !"}
                 </p>
                 <div className='social-links flex flex-row mt-[21px] gap-[10px]'>
-                    <Link href='https://www.instagram.com/drnozim_adxamovich/' className='rounded-full border font-bold border-[#ABD6EA] w-[50px] h-[50px] flex items-center justify-center text-center'>
+                    <Link  onClick={() => counter('instagram')} href='https://www.instagram.com/drnozim_adxamovich/' className='rounded-full border font-bold border-[#ABD6EA] w-[50px] h-[50px] flex items-center justify-center text-center'>
                         <FaInstagram className='text-[#476E81]' size={25} />
                     </Link>
-                    <Link href='https://t.me/nozim_adxamovich' className='rounded-full border font-bold border-[#ABD6EA] w-[50px] h-[50px] flex items-center justify-center text-center'>
+                    <Link  onClick={() => counter('telegram')} href='https://t.me/nozim_adxamovich' className='rounded-full border font-bold border-[#ABD6EA] w-[50px] h-[50px] flex items-center justify-center text-center'>
                         <FaTelegramPlane className='text-[#476E81]' size={25} />
                     </Link>
-                    <a href='https://wa.me/998901107887?text=Здравствуйте, у меня есть вопрос' className='rounded-full border font-bold border-[#ABD6EA] w-[50px] h-[50px] flex items-center justify-center text-center'>
+                    <a  onClick={() => counter('whatsapp')} href='https://wa.me/998901107887?text=Здравствуйте, у меня есть вопрос' className='rounded-full border font-bold border-[#ABD6EA] w-[50px] h-[50px] flex items-center justify-center text-center'>
                         <FaWhatsapp className='text-[#476E81]' size={25} />
                     </a>
-                    <a href='tel:+998901107887' className='rounded-full border font-bold border-[#ABD6EA] w-[50px] h-[50px] flex items-center justify-center text-center'>
+                    <a  onClick={() => counter('call')} href='tel:+998901107887' className='rounded-full border font-bold border-[#ABD6EA] w-[50px] h-[50px] flex items-center justify-center text-center'>
                         <FaPhone className='text-[#476E81]' size={25} />
                     </a>
                 </div>
