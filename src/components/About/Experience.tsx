@@ -15,7 +15,7 @@ const Experience: FC = () => {
             <div className='border-b border-[#E3E3E3] mt-[15px]'>
                 <Title text={{ ru: "Опыт и образование", uz: "Tajriba va ta'lim" }} />
                 <div className='text-[18px] 2xl:text-[20px] text-[#949494] 2xl:mt-[20px] font-medium font-manrope 2xl:pb-[40px]  2xl:w-[60%]'>
-                    Регулярно проходит стажировки за границей и участвует в конгрессах, конференциях и мастер-классах по специальности
+                    {locale === 'ru' ? 'Регулярно проходит стажировки за границей и участвует в конгрессах, конференциях и мастер-классах по специальности' : "Chet elda muntazam ravishda amaliyot o'taydi va o'z mutaxassisligi bo'yicha kongresslar, konferentsiyalar va mahorat darslarida qatnashadi"}
                 </div>
             </div>
 
