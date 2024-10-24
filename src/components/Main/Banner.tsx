@@ -1,7 +1,9 @@
 "use client"
 import { FC, useState } from 'react'
 import Image from 'next/image'
-import NozimImage from '@/public/Main/nozim.png'
+
+
+
 import Arrow from '@/public/Arrow.png'
 import ElBottomTop from "@/public/Main/bottomEllipse.png"
 import ElTop from "@/public/Main/topEllipse.png"
@@ -10,6 +12,9 @@ import twoLeftImage from '@/public/Main/2xl.png'
 import twoRigthImage from '@/public/Main/2xlRigth.png'
 import MbLeft from '@/public/Main/mbLeft.png'
 import MbRigth from '@/public/Main/mbRigth.png'
+
+
+
 import { motion } from 'framer-motion'
 import { HiCursorClick } from "react-icons/hi"
 import QuestionModal from '../Modal/Request'
@@ -51,7 +56,7 @@ const Banner: FC = () => {
       </div>
 
       <div className='relative h-[385px]  bn:h-[405px] 2xl:h-auto mt-[10px] z-[999] 2xl:mt-[-230px] 2xl:ml-[-100px]'>
-        <Image src={NozimImage} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full  2xl:h-[800px] h-[450px] relative z-[999]' />
+        <Image src='https://ucarecdn.com/240031b9-6fdf-47d6-bc9d-98d602def31f/-/preview/665x1000/' alt='Nozim Jumayev Image' width={2300} height={3300} className='object-contain w-full  2xl:h-[800px] h-[450px] relative z-[999]' />
         {/*  ELLIPSE */}
         <div className='absolute bottom-0  w-[420px]  left-1/2 transform -translate-x-1/2  2xl:w-[950px]'>
           <Image src={ElTop} alt='Ellipse 5' width={2000} height={900} className='object-contain w-[550px]  h-full 2xl:w-[1000px]' />
