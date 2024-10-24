@@ -4,6 +4,7 @@ import { IoIosArrowUp } from "react-icons/io"
 import { IoIosArrowDown } from "react-icons/io"
 import Title from '@/ui/Title'
 import { faqData } from '@/constants/Faq'
+import useLocale from '@/hooks/useLocale'
 
 
 
@@ -23,7 +24,7 @@ const Arrow: React.FC<ArrowProps> = ({ isOpen }) => (
 
 const Faq: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
-
+  const locale = useLocale()
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
   }
@@ -39,14 +40,14 @@ const Faq: React.FC = () => {
               onClick={() => toggleFAQ(index)}
             >
               <span className={`text-[22px]   mdx:text-[26px] xl:text-[30px] max-mdx:max-w-[80%] transition-all  font-manrope font-semibold`}>
-                {item.question}
+                {item.question[locale]}
               </span>
               <span className={`flex-shrink-0 w-[35px] h-[35px] mdl:w-[40px] mdl:h-[40px] 2xl:w-[60px] 2xl:h-[60px] flex items-center justify-center rounded-full font-semibold font-manrope  transition-all  ${openIndex === index ? 'border-[#27BEFF] text-[#27BEFF]' : ' text-black'}`}>
                 <Arrow isOpen={openIndex === index} />
               </span>
             </button>
             <div className={`border-b border-[#E1E1E1] overflow-hidden transition-all  ${openIndex === index ? 'max-h-screen' : 'max-h-0'}`}>
-              <p className="px-4 pb-[20px] text-[15px] mdx:text-[20px]  text-[#505050]">{item.answer}</p>
+              <p className="px-4 pb-[20px] text-[15px] mdx:text-[20px]  text-[#505050]">{item.answer[locale]}</p>
             </div>
           </div>
         ))}

@@ -30,7 +30,7 @@ const SomeFrom: FC = () => {
         e.preventDefault()
         setloading(true)
         try {
-            const res = await consultation(name, phone, service, "consultation")
+           await consultation(name, phone, service, "consultation")
             setloading(false)
             setSuccess(true)
         } catch (error) {
@@ -44,16 +44,16 @@ const SomeFrom: FC = () => {
                 scrollTrigger: {
                     trigger: formRef.current,
                     start: 'top 80%', // Анимация начнется, когда форма попадет в 80% видимости экрана
-                    toggleActions: 'play none none reset',
+                    toggleActions: 'play none none none',
                 }
             })
 
             timeline
-                .from(".title", { opacity: 0, y: -50, duration: 0.8, ease: "power3.out" })
-                .from(".social-links a", { opacity: 0, y: -30, stagger: 0.2, duration: 0.6, ease: "power3.out" }, "-=0.4")
-                .from(".description", { opacity: 0, y: -30, duration: 0.6, ease: "power3.out" }, "-=0.6")
-                .from(".form-input", { opacity: 0, y: 30, stagger: 0.2, duration: 0.7, ease: "power3.out" }, "-=0.6")
-                .from(".submit-button", { opacity: 0, scale: 0.9, duration: 0.8, ease: "power3.out" }, "-=0.6")
+            .from(".title", { opacity: 0, y: -40, duration: 0.3, ease: "power3.out" })
+            .from(".social-links a", { opacity: 0, y: -20, stagger: 0.3, duration: 0.3, ease: "power3.out" }, "-=0.3")
+            .from(".description", { opacity: 0, y: -20, duration: 0.3, ease: "power3.out" }, "-=0.4")
+            .from(".form-input", { opacity: 0, y: 20, stagger: 0.3, duration: 0.3, ease: "steps(12)" }, "-=0.4")
+            .from(".submit-button", { opacity: 0, scale: 0.8, duration: 0.4, ease: "power3.out" }, "-=0.4")
         }, formRef)
 
         return () => {
