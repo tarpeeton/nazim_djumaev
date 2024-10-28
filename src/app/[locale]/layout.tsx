@@ -15,10 +15,7 @@ export const metadata: Metadata = {
       url: 'https://my-works-ten.vercel.app/'
     }
   ],
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
-  },
+ 
   manifest: '/site.webmanifest',
   robots: {
     index: true,
@@ -135,10 +132,13 @@ export default async function LocaleLayout({
         <meta name="twitter:title" content="Doktor Nozim Jumayev - Kompleks Tibbiy Xizmatlar" />
         <meta name="twitter:description" content="Bemor manfaatlarini birinchi o‘ringa qo‘ygan tibbiyot xodimi, keng turdagi xizmatlar taklif qiladi." />
 
+   
+
+
         {/* Дополнительные SEO мета-теги */}
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://dr-nozim.uz" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
 
