@@ -1,0 +1,37 @@
+# Общие настройки для всех поисковых систем
+User-agent: *
+
+# Разрешение для важных страниц сайта
+Allow: /
+
+# Блокировка технических страниц и файлов, не предназначенных для индексации
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /search
+Disallow: /api/
+Disallow: /cgi-bin/
+Disallow: /server-status
+Disallow: /404.html
+
+# Исключение файлов, не нуждающихся в индексации
+Disallow: /*.php$
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*?*
+
+# Указание пути к карте сайта (sitemap) для быстрой индексации
+Sitemap: https://dr-nozim.uz/sitemap.xml
+
+# Дополнительные инструкции для Yandex
+User-agent: Yandex
+Allow: /
+Disallow: /api/
+Host: https://dr-nozim.uz
+
+# Дополнительные инструкции для Googlebot
+User-agent: Googlebot
+Allow: /
+Disallow: /search
