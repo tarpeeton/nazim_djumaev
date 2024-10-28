@@ -17,12 +17,12 @@ import VideoReview from '@/components/Reviews/VideoReview'
 interface IServiceSlugData {
   slug:string
   video:string
-  title: string
-  description: string
-  indications: string
-  procedure: string
-  advantages: string[]
-  risks: string[]
+  title: {uz: string , ru: string}
+  description: {uz: string , ru: string}
+  indications: {uz: string , ru: string}
+  procedure: {uz: string , ru: string}
+  advantages: {ru: string , uz: string}[]
+  risks: {ru: string , uz: string}[]
 }
 
 
@@ -44,9 +44,9 @@ export const MainServiceWitgSlug: FC = () => {
     <div>
       <div className='px-[16px] 2xl:px-[180px] mt-[20px] 2xl:mt-[30px]'>
         <BackLink url='/services' locale={locale} />
-        <Video  title={filteredData?.title} description={filteredData?.description}  video={filteredData?.video || ''}/>
+        <Video  title={filteredData?.title[locale]} description={filteredData?.description[locale]}  video={filteredData?.video || ''}/>
         <Steps />
-        <Advantages />
+        <Advantages  locale={locale}/>
       </div>
       <div className='mt-[100px] 2xl:mt-[170px]'>
             <VideoReview />
