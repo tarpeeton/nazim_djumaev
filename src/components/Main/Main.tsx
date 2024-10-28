@@ -24,7 +24,6 @@ const Main: FC = () => {
       {/* <Reviews /> */}
       <div className='mt-[100px] 2xl:mt-[170px]'>
       <VideoReview />
-
       </div>
       <Advantages />
       <SomeFrom />
