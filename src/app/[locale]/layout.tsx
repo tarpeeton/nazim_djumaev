@@ -92,6 +92,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <Head>
+      <meta name="yandex-verification" content="a5bd9034f0d09cfb" />
         {/* Yandex.Metrika counter */}
         <script
           dangerouslySetInnerHTML={{
