@@ -27,9 +27,13 @@ const Data = [
 ]
 
 
+interface ISteps {
+  locale: "ru" | "uz" 
+}
 
 
-const Steps: FC = () => {
+const Steps: FC<ISteps> = ({locale}) => {
+
   return (
     <div className='mt-[100px] 2xl:mt-[170px]'>
         <Title  text={{ru: 'Как проходит операция' , uz: "Operatsiya qanday amalga oshiriladi"}}/>
@@ -42,8 +46,8 @@ const Steps: FC = () => {
                     </p>
                   </div>
                   <div className='mt-[40px] 2xl:mt-[80px]'>
-                    <p className='text-[20px] 2xl:text-[21px] text-nowrap font-bold font-manrope'>{step.title.ru}</p>
-                    <p className='mt-[12px] text-[16px] 2xl:text-[17px] text-[#686868] font-manrope'>{step.description.ru}</p>
+                    <p className='text-[20px] 2xl:text-[21px] text-nowrap font-bold font-manrope'>{step.title[locale]}</p>
+                    <p className='mt-[12px] text-[16px] 2xl:text-[17px] text-[#686868] font-manrope'>{step.description[locale]}</p>
                     </div>
               </div>
             ))}

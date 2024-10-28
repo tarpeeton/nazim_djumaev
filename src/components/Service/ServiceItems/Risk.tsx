@@ -32,7 +32,7 @@ const Risk: FC<IRisksProps> = ({risks}) => {
     <div className='mt-[100px] 2xl:mt-[170px] flex flex-col gap-[20px] 2xl:flex-row 2xl:gap-0 2xl:justify-between'>
       <div className='border border-[#E3E3E3] rounded-[20px] py-[25px] px-[20px] 2xl:p-[45px] shadow-lg 2xl:w-[49%]'>
         <div className='2xl:w-[80%]'>
-          <Title text={{ ru: "Рекомендации по подготовке", uz: '' }} />
+          <Title text={{ ru: "Рекомендации по подготовке", uz: "Tavsiyalar" }} />
 
         </div>
         <div className='mt-[35px] 2xl:mt-[40px] flex flex-col'>
@@ -55,7 +55,7 @@ const Risk: FC<IRisksProps> = ({risks}) => {
 
       <div className='border border-[#E3E3E3] rounded-[20px] py-[25px] px-[20px] 2xl:p-[45px] shadow-lg 2xl:w-[49%]'>
         <div className='2xl:w-[80%]'>
-          <Title text={{ ru: "Противопоказания и риски", uz: '' }} />
+          <Title text={{ ru: "Противопоказания и риски", uz: "Risklar" }} />
 
         </div>
         <div className='mt-[35px] 2xl:mt-[40px] flex flex-col'>
