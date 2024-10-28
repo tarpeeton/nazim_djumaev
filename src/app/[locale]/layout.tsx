@@ -13,21 +13,23 @@ export const metadata: Metadata = {
   description: '',
   authors: [{ name: 'Rustam Kidiraliyev + RESULT AGENCY', url: 'https://my-works-ten.vercel.app/' }],
   icons: {
-    icon: 'https://ucarecdn.com/c0ab9c21-ce08-4be1-abdb-4c7c973261be/-/preview/60x71/', // Favicon fayli yo'li
+    icon: '/favicon.ico',
   },
+  
   openGraph: {
     title: '',
     description: '',
     url: 'https://yourwebsite.com', // Saytning to'liq URL manzili
-    siteName: 'Med Travel',
+    siteName: 'Doctor Nozim Jumayev',
     images: [
       {
-        url: 'https://ucarecdn.com/c0ab9c21-ce08-4be1-abdb-4c7c973261be/-/preview/60x71/', // Saytni ifodalovchi rasm
-        width: 800,
-        height: 600,
+        url: 'https://ucarecdn.com/f9d8f124-ee0d-4bdc-b024-8fbab8deaf23/-/preview/60x71/', // Saytni ifodalovchi rasm
+        width: 60,
+        height: 71,
         alt: 'Nozim Jumayev',
       },
     ],
+  
     type: 'website',
   },
 }

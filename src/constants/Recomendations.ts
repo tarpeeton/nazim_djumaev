@@ -14,11 +14,11 @@ export const RecomendationsData: IRecomendationData[] = [
     slug: 'dieta-pered-operatsiya',
     title: {
       ru: 'Диета перед операцией',
-      uz: 'Operatsiyaga tayyorgarlik'
+      uz: ''
     },
     subtitle: {
       ru: 'Зачем важна диета:Успех операции и процесс восстановления во многом зависят от общего состояния здоровья пациента. Соблюдение правильного режима питания перед операцией способствует укреплению иммунной системы, снижению веса и уменьшению нагрузки на органы, участвующие в процессе метаболизма.',
-      uz: 'Operatsiya muvaffaqiyati va tiklanish jarayoni asosan bemorning umumiy sogʻligʻiga bogʻliq. Operatsiya oldidan toʻgʻri ovqatlanish tartibiga rioya qilish immunitet tizimini mustahkamlash, vaznni kamaytirish va metabolizm jarayonida ishtirok etadigan organlarga yukni kamaytirishga yordam beradi.'
+      uz: ``
     },
     image:
       'https://ucarecdn.com/b14d155c-999f-49b5-8b50-756eba82cd73/-/preview/1000x666/',
@@ -26,7 +26,7 @@ export const RecomendationsData: IRecomendationData[] = [
       {
         text: {
           ru: 'Что включает диета:',
-          uz: 'Diyetaning tarkibi'
+          uz: ``
         },
         description: {
           ru: [
@@ -36,10 +36,9 @@ export const RecomendationsData: IRecomendationData[] = [
             'За 24 часа до операции: переход на жидкую диету (супы, бульоны) для облегчения пищеварения и минимизации риска осложнений во время наркоза.'
           ],
           uz: [
-            'Operatsiyadan 2-3 hafta oldin: ogʻir va yogʻli oziq-ovqatlarni cheklash, oddiy uglevodlarni kamaytirish tavsiya etiladi (pishiriqlar, shirinliklar).',
-            'Afsus, barqaror oqsil va yangi sabzotlar isteʼmol qilinishi kerak (ayniqsa bariatrik jarrohlik oldidan).',
-            'Operatsiyadan bir hafta oldin: spirtli ichimliklarni cheklash va shifokor tavsiya qilgan holda temir preparatlarni isteʼmol qilish.',
-            'Operatsiyadan 3 kun oldin: kofeinni kamaytirish, ko‘proq suyuqlik ichish va yengil dietaga oʻtish tavsiya etiladi (sho‘rvalar, yogurtlar, sut mahsulotlari).'
+           ``,
+           ``,
+           ``
           ]
         }
       },
@@ -57,16 +56,16 @@ export const RecomendationsData: IRecomendationData[] = [
       }
     ]
   },
-
+// 2
   {
     slug: 'padgatovka-k-narkozu',
     title: {
       ru: 'Подготовка к наркозу',
-      uz: 'Operatsiyaga tayyorgarlik'
+      uz: ``
     },
     subtitle: {
       ru: 'Консультация с анестезиологом: Обязательна перед любой операцией. Пациенту необходимо предоставить полный список принимаемых медикаментов и любые аллергические реакции на препараты.',
-      uz: 'Operatsiya muvaffaqiyati va tiklanish jarayoni asosan bemorning umumiy sogʻligʻiga bogʻliq. Operatsiya oldidan toʻgʻri ovqatlanish tartibiga rioya qilish immunitet tizimini mustahkamlash, vaznni kamaytirish va metabolizm jarayonida ishtirok etadigan organlarga yukni kamaytirishga yordam beradi.'
+      uz: ``
     },
     image:
       'https://ucarecdn.com/b14d155c-999f-49b5-8b50-756eba82cd73/-/preview/1000x666/',
@@ -74,7 +73,7 @@ export const RecomendationsData: IRecomendationData[] = [
       {
         text: {
           ru: 'Медикаментозная подготовка:',
-          uz: 'Diyetaning tarkibi'
+          uz: ``
         },
         description: {
           ru: [
@@ -83,15 +82,15 @@ export const RecomendationsData: IRecomendationData[] = [
             'Если пациент принимает лекарства для хронических заболеваний (диабет, гипертония и т.д.), их прием должен быть согласован с хирургом и анестезиологом.'
           ],
           uz: [
-            'Operatsiyadan 2-3 hafta oldin: ogʻir va yogʻli oziq-ovqatlarni cheklash, oddiy uglevodlarni kamaytirish tavsiya etiladi (pishiriqlar, shirinliklar).',
-            'Afsus, barqaror oqsil va yangi sabzotlar isteʼmol qilinishi kerak (ayniqsa bariatrik jarrohlik oldidan).',
-            'Operatsiyadan bir hafta oldin: spirtli ichimliklarni cheklash va shifokor tavsiya qilgan holda temir preparatlarni isteʼmol qilish.',
-            'Operatsiyadan 3 kun oldin: kofeinni kamaytirish, ko‘proq suyuqlik ichish va yengil dietaga oʻtish tavsiya etiladi (sho‘rvalar, yogurtlar, sut mahsulotlari).'
+           ``,
+           ``,
+           ``
           ]
         }
       }
     ]
   },
+  // 3
   {
     slug: 'fizicheskiy-aktivnost',
     title: {
@@ -127,6 +126,7 @@ export const RecomendationsData: IRecomendationData[] = [
       }
     ]
   },
+  // 4
   {
     slug: 'dieta-posle-operatsiya',
     title: {
@@ -167,6 +167,7 @@ export const RecomendationsData: IRecomendationData[] = [
       }
     ]
   },
+  // 5
   {
     slug: 'fizicheskiy-aktivnost-i-vostonovleniya',
     title: {
@@ -207,6 +208,7 @@ export const RecomendationsData: IRecomendationData[] = [
       }
     ]
   },
+  // 6
   {
     slug: 'poderjaniya-relultatov',
     title: {
@@ -246,7 +248,7 @@ export const RecomendationsData: IRecomendationData[] = [
       }
     ]
   },
-
+// 7
   {
     slug: 'obraz-jizni-posle-plasticheskix',
     title: {
@@ -274,7 +276,7 @@ export const RecomendationsData: IRecomendationData[] = [
       }
     ]
   },
-
+  // 8
   {
     slug: 'profilaktika-pavtornix-zabolevaniy',
     title: {
