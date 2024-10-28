@@ -1,8 +1,8 @@
-import Header from '@/components/Header'
-import '../globals.css'
-import Footer from '@/components/Footer'
-import type { Metadata } from 'next'
-import {NextIntlClientProvider} from 'next-intl';
+import Header from '@/components/Header';
+import '../globals.css';
+import Footer from '@/components/Footer';
+import type { Metadata } from 'next';
+import { NextIntlClientProvider } from 'next-intl';
 import messages_ru from '@/translation/ru.json';
 import messages_uz from '@/translation/uz.json';
 import Head from 'next/head';
@@ -54,23 +54,21 @@ export const metadata: Metadata = {
       },
     ],
     type: 'website',
-    locale: 'uz_UZ', // Locale for Uzbekistan (adjust if needed)
+    locale: 'uz_UZ',
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@DrNozimJumayev', // Update with the actual Twitter handle
+    site: '@DrNozimJumayev',
     title: 'Dr. Nozim Jumayev - Comprehensive Healthcare Services',
     description: 'Dedicated healthcare professional offering a range of medical services with a patient-centered approach.',
     images: [
       {
-        url: 'https://ucarecdn.com/f9d8f124-ee0d-4bdc-b024-8fbab8deaf23/-/preview/600x315/', // Recommended 600x315 for Twitter
+        url: 'https://ucarecdn.com/f9d8f124-ee0d-4bdc-b024-8fbab8deaf23/-/preview/600x315/',
         alt: 'Dr. Nozim Jumayev',
       },
     ]
   }
 };
-
-
 
 export default async function LocaleLayout({
   children,
@@ -79,25 +77,23 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  // Use a dynamic import or a switch statement to load the correct messages based on the locale
   let messages;
   switch (locale) {
-   
     case 'ru':
       messages = messages_ru;
       break;
     case 'uz':
       messages = messages_uz;
       break;
-    // Add other locales as necessary
     default:
-      messages = messages_ru; 
+      messages = messages_ru;
   }
 
   return (
     <html lang={locale}>
-     <Head>
-     <script
+      <Head>
+        {/* Yandex.Metrika counter */}
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -107,18 +103,27 @@ export default async function LocaleLayout({
               }
               k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,
               a.parentNode.insertBefore(k,a)})(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-              ym(98748235, "init", {
+              ym(98748581, "init", {
                   clickmap:true,
                   trackLinks:true,
-                  accurateTrackBounce:true,
-                  webvisor:true
+                  accurateTrackBounce:true
               });
             `,
           }}
         />
-     </Head>
+      </Head>
       <body>
-        <NextIntlClientProvider  locale={locale} messages={messages}>
+        <noscript>
+          <div>
+            <img
+              src="https://mc.yandex.ru/watch/98748581"
+              style={{ position: 'absolute', left: '-9999px' }}
+              alt=""
+            />
+          </div>
+        </noscript>
+
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Header locale={locale} />
           {children}
           <Footer />
