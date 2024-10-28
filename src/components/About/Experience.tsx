@@ -19,13 +19,13 @@ const Experience: FC = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col gap-[30px] 2xl:gap-[40px]'>
+            <div className='flex flex-col  2xl:gap-[40px]'>
                 {ExperienceData.map((item) => (
-                    <div key={item.id} className='flex flex-row 2xl:gap-[80px] py-[40px] items-center border-b border-[#E3E3E3]'>
+                    <div key={item.id} className='flex flex-col 2xl:gap-[80px] py-[40px] mdl:items-center border-b border-[#E3E3E3] mdl:flex-row items-start'>
                         <div className='2xl:w-[20%]'>
                             <p className='2x:text-[24px] font-extrabold font-manrope text-myBlue'>{item.date[locale]}</p>
                         </div>
-                        <div className='2xl:w-[25%]'>
+                        <div className='2xl:w-[25%] mt-[15px] 2xl:mt-0'>
                             <p className='text-[18px] 2xl:text-[20px] text-titleDark font-medium font-manrope'>
                                 {item.itemOne[locale]}
                             </p>
