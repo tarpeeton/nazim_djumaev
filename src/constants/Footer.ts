@@ -6,16 +6,16 @@ export const FooterService = [
     },
     service: [
       { 
-        name: { ru: 'Бариатрическая хирургия', uz: 'Bariatrik jarrohlik' }, 
-        href: '/services/bariatric-surgery' 
+        name: { ru: 'Гастропластика', uz: 'Gastroplastika' }, 
+        href: '/services' 
       },
       { 
         name: { ru: 'Лапароскопическая хирургия', uz: 'Laparoskopik jarrohlik' }, 
-        href: '/services/laparoscopic-surgery' 
+        href: '/services' 
       },
       { 
         name: { ru: 'Эстетическая хирургия', uz: 'Estetik jarrohlik' }, 
-        href: '/services/aesthetic-surgery' 
+        href: '/services' 
       }
     ],
     link: {
