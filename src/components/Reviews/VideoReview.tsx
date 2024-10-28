@@ -88,12 +88,10 @@ const VideoReview: FC = () => {
                                                     </div>
                                                 }
                                                 onClickPreview={() => setPlayingIndex(index)}
-
                                                 pip={true}
                                             />
                                         </div>
                                     </SwiperSlide>
-
                                 ))}
                                 <div className='flex w-full  mdl:hidden mt-[30px] flex-row justify-end gap-[10px]'>
                                     <button onClick={handlePrevSlide} className='rounded-full w-[50px] h-[50px] flex items-center justify-center text-center border border-myBlue'>

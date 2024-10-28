@@ -13,21 +13,9 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const images = [
-  { url: "https://ucarecdn.com/62baa773-19f2-4b34-83e8-74b0b4b946cc/-/preview/975x651/" },
-  { url: "https://ucarecdn.com/62baa773-19f2-4b34-83e8-74b0b4b946cc/-/preview/975x651/" },
-  { url: "https://ucarecdn.com/62baa773-19f2-4b34-83e8-74b0b4b946cc/-/preview/975x651/" },
-  { url: "https://ucarecdn.com/62baa773-19f2-4b34-83e8-74b0b4b946cc/-/preview/975x651/" },
-  { url: "https://ucarecdn.com/62baa773-19f2-4b34-83e8-74b0b4b946cc/-/preview/975x651/" },
-  { url: "https://ucarecdn.com/62baa773-19f2-4b34-83e8-74b0b4b946cc/-/preview/975x651/" },
-  { url: "https://ucarecdn.com/62baa773-19f2-4b34-83e8-74b0b4b946cc/-/preview/975x651/" },
-  { url: "https://ucarecdn.com/62baa773-19f2-4b34-83e8-74b0b4b946cc/-/preview/975x651/" },
-  { url: "https://ucarecdn.com/62baa773-19f2-4b34-83e8-74b0b4b946cc/-/preview/975x651/" },
-  { url: "https://ucarecdn.com/62baa773-19f2-4b34-83e8-74b0b4b946cc/-/preview/975x651/" },
-  { url: "https://ucarecdn.com/62baa773-19f2-4b34-83e8-74b0b4b946cc/-/preview/975x651/" },
-  { url: "https://ucarecdn.com/62baa773-19f2-4b34-83e8-74b0b4b946cc/-/preview/975x651/" },
-  { url: "https://ucarecdn.com/62baa773-19f2-4b34-83e8-74b0b4b946cc/-/preview/975x651/" },
-  { url: "https://ucarecdn.com/62baa773-19f2-4b34-83e8-74b0b4b946cc/-/preview/975x651/" },
-  // More images...
+  { url: "https://ucarecdn.com/0a21e10d-b744-47ad-a0c5-7ebb28d7390c/-/preview/1000x707/" },
+  { url: "https://ucarecdn.com/f849ed25-f912-4c65-aad5-a0f0d4718074/-/preview/1000x707/" },
+  { url: "https://ucarecdn.com/abe49039-cca1-462c-82bc-b3b268241100/-/preview/506x364/" }
 ];
 
 gsap.registerPlugin(ScrollTrigger);
@@ -103,15 +91,18 @@ const Sertificates: FC = () => {
             >
               {images.map((img, index) => (
                 <SwiperSlide key={index} className="mt-[30px]">
-                  <PhotoProvider>
+                  <PhotoProvider >
                     <PhotoView src={img.url}>
+                      <div className='rounded-[20px]'>
                       <Image
                         src={img.url}
                         alt={`Certificate ${index + 1}`}
-                        width={975}
-                        height={651}
-                        className="cursor-pointer h-[450px] w-full object-cover"
+                        width={1000}
+                        height={707}
+                        quality={100}
+                        className="cursor-pointer rounded-[20px] h-[450px] 2xl:h-[300px] w-full object-contain"
                       />
+                      </div>
                     </PhotoView>
                   </PhotoProvider>
                 </SwiperSlide>
