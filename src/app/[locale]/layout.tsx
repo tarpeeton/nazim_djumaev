@@ -5,7 +5,6 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import messages_ru from '@/translation/ru.json';
 import messages_uz from '@/translation/uz.json';
-import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: 'Dr. Nozim Jumayev',
@@ -91,8 +90,8 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <Head>
-
+      <head>
+      <meta name="yandex-verification" content="a5bd9034f0d09cfb" />
         {/* Yandex.Metrika counter */}
         <script
           dangerouslySetInnerHTML={{
@@ -112,7 +111,7 @@ export default async function LocaleLayout({
             `,
           }}
         />
-      </Head>
+      </head>
       <body>
         <noscript>
           <div>
