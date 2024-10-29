@@ -28,7 +28,7 @@ const Footer: FC = () => {
 				<div>
 					<div className='flex flex-col'>
 						<div className='flex flex-row w-full'>
-							<Image src={Logo} alt='Logo' quality={100} width={80} height={80} className='object-contain w-[55px] he-[55px]' />
+							<Image src='https://ucarecdn.com/b9ad1855-c77a-486b-9fef-7dba7603ab29/-/preview/80x80/' alt='Logo' quality={100} width={80} height={80} className='object-contain w-[65px] h-[75px] 2xl:w-[70px] 2xl:h-[75px]' />
 							<div className='w-[40%] ml-[17px]'>
 								<p className='text-[25px] text-myBlue  font-extrabold font-manrope'>
 									{locale ==='ru' ? 'Нозим Жумаев' : "Nozim Jumayev"}

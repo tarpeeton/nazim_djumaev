@@ -44,7 +44,7 @@ const Header = ({ locale }: { locale: string }) => {
     <React.Fragment>
       <div className='flex flex-row justify-between bg-white px-[16px] py-[10px] slg:px-[20px] 2xl:px-[180px]'>
         <Link href='/' className='logo flex items-center relative z-[999]'>
-          <Image src={Logo} alt='Logo' width={60} height={60} quality={100} className='object-cover' />
+          <Image src='https://ucarecdn.com/b9ad1855-c77a-486b-9fef-7dba7603ab29/-/preview/60x60/' alt='Logo' width={71} height={71} quality={100} className='object-cover 2xl:w-[71px] 2xl:h-[71px]' />
         </Link>
 
         {/* SERVICES */}

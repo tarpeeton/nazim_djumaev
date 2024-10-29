@@ -21,7 +21,6 @@ const Recomnedations: FC = () => {
                     {locale === 'ru' ? 'Все рекомендации' : 'Barcha Maslahatlar'}
                 </Link>
             </div>
-
         </div>
     )
 }
