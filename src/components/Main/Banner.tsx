@@ -34,27 +34,21 @@ const Banner: FC = () => {
       <div className='flex flex-col w-full z-[999] relative'>
         <h1 className=' w-full  text-[70px] mdl:text-[] text-center 2xl:text-[140px] text-titleDark font-bold font-manrope  uppercase'>   {locale === 'ru' ? 'Нозим Жумаев' : ' NOZIM JUMAyEV'}</h1>
         <p className=' mx-[13px] 2xl:w-[29%] 2xl:text-left 2xl:ml-[180px] 2xl:mx-0 text-center mt-[10px] text-[14px] font-semibold  text-[#686868]  2xl:text-[18px]'>
-
         {locale === 'ru' ? "Опытный бариатрический хирург с многолетней практикой. Специализируется на передовых методах хирургического лечения ожирения и смежных проблем" : "Ko'p yillik amaliyotga ega tajribali bariatrik jarroh. Ortiqcha vazn  va unga aloqador muammolarni jarrohlik yo'li bilan davolashning eng yaxshi usullariga ixtisoslashgan"}
-
         </p>
       </div>
-
       <div className=' 2xl:hidden  overflow-hidden absolute top-0'>
         <Image src={MbLeft} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[99]' />
       </div>
       <div className=' 2xl:hidden  overflow-hidden absolute top-0 right-0'>
         <Image src={MbRigth} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[99]' />
       </div>
-
-
       <div className='hidden 2xl:block rounded-[20px] overflow-hidden absolute bottom-0 h-full'>
         <Image src={twoLeftImage} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[99]' />
       </div>
       <div className='hidden 2xl:block rounded-[20px] overflow-hidden absolute bottom-0 right-0 h-full'>
         <Image src={twoRigthImage} alt='Ellipse 5' width={2300} height={3300} className='object-contain w-full   relative z-[99]' />
       </div>
-
       <div className='relative h-[385px]  bn:h-[405px] 2xl:h-auto mt-[10px] z-[999] 2xl:mt-[-230px] 2xl:ml-[-100px]'>
         <Image src='https://ucarecdn.com/240031b9-6fdf-47d6-bc9d-98d602def31f/-/preview/665x1000/' alt='Nozim Jumayev Image' width={2300} height={3300} className='object-contain w-full  2xl:h-[800px] h-[450px] relative z-[999]' />
         {/*  ELLIPSE */}

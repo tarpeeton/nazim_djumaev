@@ -74,7 +74,7 @@ const SomeFrom: FC = () => {
                 </div>
                 <p className='description text-[16px] 2xl:w-[50%] font-manrope text-[#686868] 2xl:text-[20px] mt-[13px]'>
 
-                    {locale === 'ru' ? 'Заполните форму чтобы записаться на консультацию !' : "Konsultatsiyag Yozilish Uchun Formani Toldiring !"}
+                    {locale === 'ru' ? 'Заполните форму чтобы записаться на консультацию !' : "Konsultatsiyaga Yozilish Uchun Formani Toldiring !"}
                 </p>
                 <div className='social-links flex flex-row mt-[21px] gap-[10px]'>
                     <Link  onClick={() => counter('instagram')} href='https://www.instagram.com/drnozim_adxamovich/' className='rounded-full border font-bold border-[#ABD6EA] w-[50px] h-[50px] flex items-center justify-center text-center'>

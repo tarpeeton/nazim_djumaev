@@ -21,7 +21,7 @@ export const RecomendationsData: IRecomendationData[] = [
       uz: `Jarrohlik samarasi va tiklanish jarayoni ko‘pincha bemorning umumiy salomatligiga bog‘liq. Jarrohlikdan oldin to‘g‘ri ovqatlanish rejimiga amal qilish immunitet tizimini mustahkamlashga, vaznni kamaytirishga va moddalar almashinuvi jarayonida ishtirok etadigan organlarga bosimni kamaytirishga yordam beradi.`
     },
     image:
-      'https://ucarecdn.com/b14d155c-999f-49b5-8b50-756eba82cd73/-/preview/1000x666/',
+      'https://ucarecdn.com/beb1b416-8222-4a8e-b6e9-6be16a5beb46/-/preview/1000x667/',
     options: [
       {
         text: {
@@ -52,7 +52,7 @@ export const RecomendationsData: IRecomendationData[] = [
           ru: [
             'Пациентам перед бариатрическими операциями может быть рекомендована особая диета с высоким содержанием белков и низким содержанием углеводов, чтобы уменьшить размер печени и облегчить доступ к желудку.'
           ],
-          uz: ['', '', '']
+          uz: ['Jigar hajmini kichraytirish va oshqozonga kirishni osonlashtirish uchun bariatrik jarrohlikdan oldin bemorlarga oqsillar miqdori yuqori va uglevodlar miqdori kam bo‘lgan maxsus parhez tavsiya etilishi mumkin.']
         }
       }
     ]
@@ -101,7 +101,7 @@ export const RecomendationsData: IRecomendationData[] = [
       uz: `Jismoniy tayyorgarlik: Operatsiyadan oldin doimiy o‘rtacha jismoniy faoliyat (agar ruxsat etilgan bo‘lsa) operatsiya natijasini yaxshilashi mumkin. Masalan, kunda piyoda yurish nafas olish va yurak-qon tomir tizimlarini mustahkamlashga yordam beradi.`
     },
     image:
-      'https://ucarecdn.com/b14d155c-999f-49b5-8b50-756eba82cd73/-/preview/1000x666/',
+      'https://ucarecdn.com/9f699951-500c-4566-bff9-6bf89a46e097/-/preview/1000x666/',
     options: [
       {
         text: {
@@ -140,7 +140,7 @@ export const RecomendationsData: IRecomendationData[] = [
 `
     },
     image:
-      'https://ucarecdn.com/b14d155c-999f-49b5-8b50-756eba82cd73/-/preview/1000x666/',
+      'https://ucarecdn.com/ddde601c-1b9a-46d8-8c80-fd3f5a034a7c/-/preview/1000x667/',
     options: [
       {
         text: {
@@ -181,7 +181,7 @@ export const RecomendationsData: IRecomendationData[] = [
 `
     },
     image:
-      'https://ucarecdn.com/b14d155c-999f-49b5-8b50-756eba82cd73/-/preview/1000x666/',
+      'https://ucarecdn.com/5f687eb8-c09d-41eb-97c0-4b0f49fc70ec/-/preview/1000x666/',
     options: [
       {
         text: {
@@ -222,7 +222,7 @@ export const RecomendationsData: IRecomendationData[] = [
       uz: `Ovqatlanish ratsioni:  Bemorlar tavsiya etilgan ovqatlanish tartibiga qatʼiy rioya qilishi kerak, unda oqsil miqdori yuqori va uglevodlar miqdori kam bo‘lgan mahsulotlarni isteʼmol qilish man etiladi. Katta porsiyalar yoki yuqori kaloriyali mahsulotlarni tez-tez isteʼmol qilish operatsiya natijalarini yo‘qqa chiqarishi mumkin.`
     },
     image:
-      'https://ucarecdn.com/b14d155c-999f-49b5-8b50-756eba82cd73/-/preview/1000x666/',
+      'https://ucarecdn.com/59a09193-0a82-4c65-8f4b-a53d5dc48348/-/preview/1000x666/',
     options: [
       {
         text: {
@@ -262,7 +262,7 @@ export const RecomendationsData: IRecomendationData[] = [
       uz: `Terini parvarishlash: Terini tortish bo‘yicha operatsiyalar yoki abdominoplastikadan so‘ng tiklanishni tezlashtirish va natijalarni yaxshilash uchun teriga g‘amxo‘rlik qilish, namlovchi vositalardan foydalanish va kompression ichki kiyim kiyish muhim.`
     },
     image:
-      'https://ucarecdn.com/b14d155c-999f-49b5-8b50-756eba82cd73/-/preview/1000x666/',
+      'https://ucarecdn.com/ddd8f8a8-e9f6-492c-bebb-ea55a91bd16c/-/preview/1000x666/',
     options: [
       {
         text: {
@@ -290,7 +290,7 @@ export const RecomendationsData: IRecomendationData[] = [
       uz: `Churra profilaktikasi: Gernioplastikadan so‘ng churra qaytalanmasligi uchun uzoq vaqt davomida ortiqcha jismoniy zo‘riqish va og‘ir narsalarni ko‘tarishdan saqlanish tavsiya etiladi.`
     },
     image:
-      'https://ucarecdn.com/b14d155c-999f-49b5-8b50-756eba82cd73/-/preview/1000x666/',
+      'https://ucarecdn.com/9a4a789c-d7f4-4053-a1d6-ae5d5fa9fb98/-/preview/1000x666/',
     options: [
       {
         text: {
