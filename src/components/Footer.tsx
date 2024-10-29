@@ -31,31 +31,25 @@ const Footer: FC = () => {
 						<div className='flex flex-row w-full'>
 							<Image src={Logo} alt='Logo' quality={100} width={80} height={80} className='object-contain w-[55px] he-[55px]' />
 							<div className='w-[40%] ml-[17px]'>
-								<p className='text-[25px] text-myBlue  font-extrabold font-manrope'>Нозим Жумаев</p>
+								<p className='text-[25px] text-myBlue  font-extrabold font-manrope'>
+									{locale ==='ru' ? 'Нозим Жумаев' : "Nozim Jumayev"}
+									</p>
 							</div>
 						</div>
 					</div>
-					{/* LINKS */}
 					<SocialLicks />
-
 				</div>
-
-
 				<div className='flex flex-col gap-[40px] 2xl:flex-row px-[16px] mt-[40px] 2xl:mt-0 2xl:gap-[60px]'>
 					{FooterService.map((ser, index) => (
 						<div key={index} className="cursor-pointer relative 2xl:pb-[60px] flex flex-col">
-							
-							
 							<p  className="text-[20px] text-titleDark font-bold font-manrope 2xl:text-[24px] mb-[15px]">
 								{ser.serviceName[locale]}
 							</p>
-
 							{ser.service.map((name, subIndex) => (
 								<Link href={name.href} key={subIndex}    className="text-[16px] text-titleDark 2xl:text-[18px] font-medium">
 									{name.name[locale]}
 								</Link>
 							))}
-
 							<Link href={ser.link.href} className="text-myBlue flex items-center font-bold mt-[15px] 2xl:absolute 2xl:bottom-[20px]">
 								{ser.link.text[locale]}
 								<MdOutlineNavigateNext size={25} className="mt-[3px] ml-[3px]" />
@@ -65,13 +59,13 @@ const Footer: FC = () => {
 
 				</div>
 			</div>
-
-
-
 			{/* COPY */}
 			<div className='flex flex-row py-[12px] px-[18px] 2xl:px-[200px] border-t border-borderColor'>
 				<div className='w-[55%] flex items-center mdl:w-[70%]'>
-					<p className='font-raleway font-medium text-[12px] text-[#B3B3B3] mdl:text-[16px] '>2024 © Нозим Жумаев. Все права защищены</p>
+					<p className='font-raleway font-medium text-[12px] text-[#B3B3B3] mdl:text-[16px] '>
+						
+						{locale === 'ru' ? "2024 © Нозим Жумаев. Все права защищены" : "2024 © Nozim Jumayev. Barcha Huquqlar Himoyalangan "}
+						</p>
 				</div>
 				<div className='w-[45%] flex items-center justify-end'>
 					<Link href='https://result-me.uz/api/redirect?from=bm96aW0tanVtYWV2'>

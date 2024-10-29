@@ -32,7 +32,7 @@ const Banner: FC = () => {
   return (
     <div className='mt-[10px]  2xl:relative w-full overflow-hidden  2xl:h-[725px]'>
       <div className='flex flex-col w-full z-[999] relative'>
-        <h1 className=' w-full  text-[70px] mdl:text-[] text-center 2xl:text-[140px] text-titleDark font-bold font-manrope  uppercase'>Нозим Жумаев</h1>
+        <h1 className=' w-full  text-[70px] mdl:text-[] text-center 2xl:text-[140px] text-titleDark font-bold font-manrope  uppercase'>   {locale === 'ru' ? 'Нозим Жумаев' : ' NOZIM JUMAyEV'}</h1>
         <p className=' mx-[13px] 2xl:w-[29%] 2xl:text-left 2xl:ml-[180px] 2xl:mx-0 text-center mt-[10px] text-[14px] font-semibold  text-[#686868]  2xl:text-[18px]'>
 
         {locale === 'ru' ? "Опытный бариатрический хирург с многолетней практикой. Специализируется на передовых методах хирургического лечения ожирения и смежных проблем" : "Ko'p yillik amaliyotga ega tajribali bariatrik jarroh. Ortiqcha vazn  va unga aloqador muammolarni jarrohlik yo'li bilan davolashning eng yaxshi usullariga ixtisoslashgan"}
