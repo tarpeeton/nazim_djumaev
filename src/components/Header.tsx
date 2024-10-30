@@ -6,7 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx"
 import { Link } from '@/i18n/routing'
 import { IoMdClose } from "react-icons/io"
 import { useTranslations } from 'next-intl'
-import Logo from '@/public/logo.png'
+import Logo from '@/public/logo.svg'
 import QuestionModal from './Modal/Request'
 
 
@@ -44,7 +44,7 @@ const Header = ({ locale }: { locale: string }) => {
     <React.Fragment>
       <div className='flex flex-row justify-between bg-white px-[16px] py-[10px] slg:px-[20px] 2xl:px-[180px]'>
         <Link href='/' className='logo flex items-center relative z-[999]'>
-          <Image src='https://ucarecdn.com/b9ad1855-c77a-486b-9fef-7dba7603ab29/-/preview/60x60/' alt='Logo' width={71} height={71} quality={100} className='object-cover 2xl:w-[71px] 2xl:h-[71px]' />
+          <Image src={Logo} alt='Logo' width={71} height={71} quality={100} className='object-cover w-[71px] h-[71px] 2xl:w-[81px] 2xl:h-[90px]' />
         </Link>
 
         {/* SERVICES */}
