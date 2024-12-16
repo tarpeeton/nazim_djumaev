@@ -39,7 +39,7 @@ const Faq: React.FC = () => {
               className={`w-full flex justify-between items-start text-left p-4 text-lg   ${openIndex === index ? 'text-[#27BEFF]' : 'text-black'}`}
               onClick={() => toggleFAQ(index)}
             >
-              <span className={`text-[22px]   mdx:text-[26px] xl:text-[30px] max-mdx:max-w-[80%] transition-all  font-manrope font-semibold`}>
+              <span className={`text-[22px]   mdx:text-[26px] xl:text-[25px] max-mdx:max-w-[80%] transition-all  font-manrope font-semibold`}>
                 {item.question[locale]}
               </span>
               <span className={`flex-shrink-0 w-[35px] h-[35px] mdl:w-[40px] mdl:h-[40px] 2xl:w-[60px] 2xl:h-[60px] flex items-center justify-center rounded-full font-semibold font-manrope  transition-all  ${openIndex === index ? 'border-[#27BEFF] text-[#27BEFF]' : ' text-black'}`}>

@@ -61,8 +61,8 @@ const Service: FC<IServiceProps> = ({ show }) => {
                 {
                     opacity: 1,
                     y: 0,
-                    duration: 0.4,
-                    stagger: 0.3,
+                    duration: 0.3,
+                    stagger: 0.2,
                     ease: 'power1.out',
                     scrollTrigger: {
                         trigger: serviceRef.current, // Триггер для ScrollTrigger

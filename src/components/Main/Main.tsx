@@ -9,12 +9,17 @@ import SomeFrom from './some-form'
 import Recomnedations from './Recomendations'
 import Faq from './Faq'
 import VideoReview from '../Reviews/VideoReview'
+import YTVideo from '@/components/Main/YT-Video'
 
 
 const Main: FC = () => {
   return (
     <div>
       <Banner />
+      <YTVideo />
+      <SomeFrom />
+
+
       <div className='mt-[100px] 2xl:mt-[170px]'>
         <About />
         <div className='mt-[100px] 2xl:mt-[170px]'>
